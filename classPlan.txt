@@ -1,0 +1,38 @@
+LinkedList
+Player
+
+Cell
+Land
+Facility
+	Well
+	Mixer
+	Truck
+
+Animal
+	MilkProducing
+	MeatProducing
+	EggProducing
+		(Multiple Inheritance)
+		Chicken
+		Cow
+		Duck
+		Rabbit
+		Horse
+		Goat
+
+Product
+	FarmProduct
+		ChickenEgg
+		ChickenMeat
+		DuckEgg
+		DuckMeat
+		CowMilk
+		CowMeat
+		RabbitMeat
+		HorseMilk
+		GoatMilk
+		GoatMeat
+	SideProduct
+		(Terserah asal 3)
+
+MainProgram (Bikin bareng)
