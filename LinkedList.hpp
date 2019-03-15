@@ -13,12 +13,8 @@ public:
   // ctor parameter
   //membuat elemen linked list dengan next = Nil
   LinkedList<T> (T);
-  // cctor
-  LinkedList<T> (const LinkedList& T);
   // dtor -> hapus pointer
-  ~LinkedList<T> (T);
-  // operator =
-  LinkedList<T> operator= (const LinkedList<T>&)
+  ~LinkedList<T> ();
 
   // getter-setter
   T getElmt();
