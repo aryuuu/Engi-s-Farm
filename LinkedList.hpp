@@ -23,8 +23,7 @@ public:
   void setNext(LinkedList*);
 
   // fungsi-fungsi dari LinkedList
-  bool isEmpty();
-  int find(T);
+  bool isEmpty(); int find(T);
   void add(T);
   void remove(T);
 }
