@@ -2,28 +2,49 @@
 #define PRODUCT_HPP
 
 
-//kelas Product merupakan kelas yang menggambarkan
-//segala jenis produk yang didapat
-//baik setelah interaksi dengan Animal, menyembelih
-//dan setelah melakukan pengolahan
+/**kelas Product merupakan kelas yang menggambarkan
+*segala jenis produk yang didapat
+*baik setelah interaksi dengan Animal, menyembelih
+*dan setelah melakukan pengolahan
+**/
 class Product{
 	private :
-		const int harga; //harga produk
-		const string nama; //nama produk
+		/**
+		*harga produk
+		**/
+		const int harga; 
+		/**
+		*nama produk
+		**/
+		const string nama; 
 	public :
-		//constructor
+		/**
+		*constructor
+		**/
 		Product(int h, int n);
 
-		//getter 
-		//mengembalikan harga produk
+		/**
+		*getter 
+		**/
+		/**
+		*mengembalikan harga produk
+		**/
 		virtual int getHarga() const;
-
+		/**
+		*mengembalikan nama produk
+		**/
 		virtual string getNama() const;
 
-		//setter 
-		//set harga produk
+		/**
+		*setter 
+		**/
+		/**
+		*set harga produk
+		**/
 		virtual void setHarga();
-		//set nama produk
+		/**
+		*set nama produk
+		**/
 		virtual void setNama();
 		
 };

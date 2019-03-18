@@ -2,17 +2,25 @@
 #ifndef RABBITMEAT_HPP
 #define RABBITMEAT_HPP
 
-//RabbitMeat adalah kelas yang menggambarkan produk yang didapatkan
-//setelah menyembelih Rabbit
+/**
+*RabbitMeat adalah kelas yang menggambarkan produk yang didapatkan
+*setelah menyembelih Rabbit
+**/
 class RabbitMeat: public FarmProduct{
 private:
 
 public:
-	//constructor
+	/**
+	*constructor
+	**/
 	RabbitMeat(string nama, int harga);
-	//set nama produk
+	/**
+	*set nama produk
+	**/
 	void setNama(string n);
-	//mengembalikan nama produk
+	/**
+	*mengembalikan nama produk
+	**/
 	string getNama() const;
 }
 

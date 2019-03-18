@@ -3,17 +3,25 @@
 #ifndef HORSEMILK_HPP
 #define HORSEMILK_HPP
 
-//merupakan kelas yang didapat 
-//setelah melakukan interaksi dengan Horse
+/**
+*merupakan kelas yang didapat 
+*setelah melakukan interaksi dengan Horse
+**/
 class HorseMilk: public FarmProduct{
 private:
 
 public:
-	//constructor
+	/**
+	*constructor
+	**/
 	HorseMilk(string nama, int harga);
-	//set nama produk
+	/**
+	*set nama produk
+	**/
 	void setNama(string n);
-	//mengembalikan nama produk
+	/**
+	*mengembalikan nama produk
+	**/
 	string getNama() const;
 }
 

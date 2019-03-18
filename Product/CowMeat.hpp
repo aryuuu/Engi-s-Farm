@@ -3,17 +3,25 @@
 #ifndef COWMEAT_HPP
 #define COWMEAT_HPP
 
-//merupakan kelas yang didapat setelah
-//menyembelih Cow
+/**
+*merupakan kelas yang didapat setelah
+*menyembelih Cow
+**/
 class CowMeat: public FarmProduct{
 private:
 
 public:
-	//constructor
+	/**
+	*constructor
+	**/
 	CowMeat(string nama, int harga);
-	//set nama produk
+	/**
+	*set nama produk
+	**/
 	void setNama(string n);
-	//mengembalikan nama produk
+	/**
+	*mengembalikan nama produk
+	**/
 	string getNama() const;
 }
 

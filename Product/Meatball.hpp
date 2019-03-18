@@ -2,24 +2,41 @@
 #ifndef MEATBALL_HPP
 #define MEATBALL_HPP 
 
-//merupakan kelas hasil olahan
-//CowMeat, ChickenEgg, dan CowMilk
+/**
+*merupakan kelas hasil olahan
+*CowMeat, ChickenEgg, dan CowMilk
+**/
 class Meatball: public SideProduct{
 private:
 
 public:
-	//constructor
+	/**
+	*constructor
+	**/
 	Meatball(string nama, int harga);
-	//getter
-	//mengembalikan harga
+
+	/**
+	*getter
+	**/
+	/**
+	*mengembalikan harga
+	**/
 	int getHarga() const;
-	//mengembalikan nama
+	/**
+	*mengembalikan nama
+	**/
 	string getNama() const;
 
-	//setter
-	//set harga 
+	/**
+	*setter
+	**/
+	/**
+	*set harga 
+	**/
 	void setHarga() const;
-	//set nama 
+	/**
+	*set nama 
+	**/
 	void setNama() const;
 	
 	
