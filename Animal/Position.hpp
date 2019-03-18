@@ -1,4 +1,5 @@
 // Fake POSITION Class
+// Tidak digunakan
 
 #ifndef _POSITION_HPP
 #define _POSITION_HPP

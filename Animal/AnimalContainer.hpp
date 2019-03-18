@@ -1,6 +1,7 @@
-//#include "LinkedList.hpp"
 #include "Position.hpp"
 #include "Animal.hpp"
+//#include "LinkedList.hpp"
+//#include "Player.hpp"
 //#include "Farm.hpp"
 
 #ifndef _ANIMAL_CONTAINER_HPP
@@ -28,6 +29,9 @@ public:
   void removeAnimal(Animal*);   // menghapus animal tertentu dari animalList
   Animal* findNear(Position);   // mengembalikan animal pertama yang ditemukan
                                // yang memiliki posisi di atas, bawah, kiri, atau kanan
+
+  bool noAnimalorPlayerOn(Player, Position);  // mengembalikan true jika tidak ada
+                                              // animal atau player to position tersebut
 
   void allAnimalMove(Farm);    // menggerakkan seluruh animal di dalam list ini
   void allAnimalHungrier();    // menambahkan tingkat kelaparan setiap
