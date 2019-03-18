@@ -8,7 +8,7 @@ class MeatProducingAnimal: public Animal
 private:
   // tidak ada atribut
 public:
-  bool canBeKilled();               // mengeset canBeKilled menjadi true
+  bool canBeKilled() const;               // mengeset canBeKilled menjadi true
 };
 
 #endif

@@ -8,7 +8,7 @@ class EggProducingAnimal: public Animal
 private:
   // tidak ada atribut
 public:
-  bool canBeInteracted();               // mengeset canBeInteracted menjadi true
+  bool canBeInteracted() const;               // mengeset canBeInteracted menjadi true
 };
 
 #endif
