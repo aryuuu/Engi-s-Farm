@@ -6,7 +6,7 @@
 class MilkProducingAnimal: public Animal
 {
 private:
-
+  // tidak ada atribut
 public:
   bool canBeInteracted();               // mengeset canBeInteracted menjadi true
 };

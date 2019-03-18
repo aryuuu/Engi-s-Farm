@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <cstdlib>
 using namespace std;
@@ -75,7 +76,7 @@ void LinkedList<T>::remove(T element) {
 		this->head=itr->next;
 		itr->next=NULL;
 	}else{
-		
+
 	}
 }
 template <class T>

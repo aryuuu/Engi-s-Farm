@@ -1,15 +1,14 @@
 #include "Position.hpp"
 #include "Animal.hpp"
-//#include "LinkedList.hpp"
-//#include "Player.hpp"
-//#include "Farm.hpp"
+#include "LinkedList.hpp"
+#include "Player.hpp"
+#include "Farm.hpp"
 
 #ifndef _ANIMAL_CONTAINER_HPP
 #define _ANIMAL_CONTAINER_HPP
 
 // Class berisi data animal yang hidup
 // Memanfaatkan linkedList
-
 class AnimalContainer
 {
 private:
