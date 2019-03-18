@@ -3,7 +3,7 @@
 #ifndef _RENDER_HPP
 #define _RENDER_HPP
 
-class Land : public Cell
+class Land :
 {
 private:
 

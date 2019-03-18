@@ -5,10 +5,13 @@
 
 class Land : public Cell
 {
-private:
-
-public:
-
+  private:
+    std::string legend;
+    std::string category;
+    bool isGrass;
+  public:
+    Land();
+    Land(std::string legend,std::string category,bool isGrass);
 };
 
 #endif
