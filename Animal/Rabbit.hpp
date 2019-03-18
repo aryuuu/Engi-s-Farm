@@ -1,28 +1,42 @@
+/**
+  * @file Rabbit.hpp
+  * @author SubscribeToPewDiePie
+  * @brief File berisi method dan atribut dari class Rabbit
+  * @version 1
+  * @date 2019-03-18
+  */
+
 #include "MeatProducingAnimal.hpp"
 
 #ifndef _RABBIT_HPP
 #define _RABBIT_HPP
 
-// Class chicken mendefinisikan tipe rabbit
-// Memiliki habitat di Grassland
-// Jika di-interact : tidak ada
-// Jika di-kill : RabbitMeat
+/** Class chicken mendefinisikan tipe rabbit;
+  * Memiliki habitat di Grassland;
+  * Jika di-interact : tidak ada;
+  * Jika di-kill : RabbitMeat */
 
 class Rabbit: public MeatProducingAnimal
 {
 private:
-  const std::string name = "Rabbit";
-  const std::string habitat = "Grassland";
+  const std::string name = "Rabbit";          // menandakaan tipe dari animal
+  const std::string habitat = "Grassland";    // menandakan habitat tempat hidup animal tersebut
 
 public:
-  Rabbit(Position p);               // konstruktor dari tipe rabbit
+  /** konstruktor dari tipe rabbit */
+  Rabbit(Position p);
 
-  bool canMoveTo(Position, Farm) const;  // mengembalikan true jika rabbit bisa move ke position di dalam Farm
+  /** mengembalikan true jika rabbit bisa move ke position di dalam Farm */
+  bool canMoveTo(Position, Farm) const;
 
-  std::string getHabitat() const;         // mengembalikan habitat dari rabbit (Grassland)
-  std::string animalType() const;         // mengembalikan tipe animal (Rabbit)
-  std::string sound() const;              // menentukan suara dari animal ini
-  std::string killProduct() const;        // menentukan produk hasil kill
+  /** mengembalikan habitat dari rabbit (Grassland) */
+  std::string getHabitat() const;
+  /** mengembalikan tipe animal (Rabbit) */
+  std::string animalType() const;
+  /** menentukan suara dari animal ini */
+  std::string sound() const;
+  /** menentukan produk hasil kill */
+  std::string killProduct() const;
 };
 
 #endif

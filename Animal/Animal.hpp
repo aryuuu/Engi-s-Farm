@@ -17,9 +17,11 @@
 class Animal
 {
 private:
-  Position loc;              // mengembalikan posisi dari sebuah binatang
-  int notEatenC;             // counter menghitung berapa turn terlewati setelah animal tidak makan
-  bool hungry;               // menentukan apakah binatang tersebut lapar atau tidak
+  const int maxNotEatenC = 20;    // angka maksimum hewan tidak makan
+  const int hungryNotEatenC = 10; // angka di mana hewan mulai kelaparan
+  Position loc;               // mengembalikan posisi dari sebuah binatang
+  int notEatenC;              // counter menghitung berapa turn terlewati setelah animal tidak makan
+  bool hungry;                // menentukan apakah binatang tersebut lapar atau tidak
 public:
   /** ctor
     * konstruktor kelas binatang yang menentukan lokasi binatang tersebut

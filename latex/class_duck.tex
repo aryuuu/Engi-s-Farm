@@ -1,0 +1,97 @@
+\hypertarget{class_duck}{}\section{Duck Class Reference}
+\label{class_duck}\index{Duck@{Duck}}
+
+
+{\ttfamily \#include $<$Duck.\+hpp$>$}
+
+Inheritance diagram for Duck\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_duck}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_duck_a07712e5ee93186becd20ee07a16430e7}{Duck}} (\mbox{\hyperlink{class_position}{Position}} p)
+\item 
+bool \mbox{\hyperlink{class_duck_a5b53ac1fbe028859bdc0149e6eeeef64}{can\+Move\+To}} (\mbox{\hyperlink{class_position}{Position}}, \mbox{\hyperlink{class_farm}{Farm}}) const
+\item 
+std\+::string \mbox{\hyperlink{class_duck_ada6104f405921dc1aaf38a7df72a8465}{get\+Habitat}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_duck_a90ea0823650fe49eddba0d24647dd1bd}{animal\+Type}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_duck_a26799f737ee32fd2b7cd871ec1a2727f}{sound}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_duck_a38e775e1f4ab667eeb997fb36837b456}{interact\+Product}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class chicken mendefinisikan tipe bebek; Memiliki habitat di Coop; Jika di-\/interact \+: menghasilkan Duck\+Egg; Jika di-\/kill \+: tidak ada 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_duck_a07712e5ee93186becd20ee07a16430e7}\label{class_duck_a07712e5ee93186becd20ee07a16430e7}} 
+\index{Duck@{Duck}!Duck@{Duck}}
+\index{Duck@{Duck}!Duck@{Duck}}
+\subsubsection{\texorpdfstring{Duck()}{Duck()}}
+{\footnotesize\ttfamily Duck\+::\+Duck (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{p }\end{DoxyParamCaption})}
+
+konstruktor dari tipe animal ini 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_duck_a90ea0823650fe49eddba0d24647dd1bd}\label{class_duck_a90ea0823650fe49eddba0d24647dd1bd}} 
+\index{Duck@{Duck}!animalType@{animalType}}
+\index{animalType@{animalType}!Duck@{Duck}}
+\subsubsection{\texorpdfstring{animalType()}{animalType()}}
+{\footnotesize\ttfamily std\+::string Duck\+::animal\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+mengembalikan tipe animal (\mbox{\hyperlink{class_duck}{Duck}}) 
+
+Implements \mbox{\hyperlink{class_animal_a1969cf8cf77a7900207420ae26f856e9}{Animal}}.
+
+\mbox{\Hypertarget{class_duck_a5b53ac1fbe028859bdc0149e6eeeef64}\label{class_duck_a5b53ac1fbe028859bdc0149e6eeeef64}} 
+\index{Duck@{Duck}!canMoveTo@{canMoveTo}}
+\index{canMoveTo@{canMoveTo}!Duck@{Duck}}
+\subsubsection{\texorpdfstring{canMoveTo()}{canMoveTo()}}
+{\footnotesize\ttfamily bool Duck\+::can\+Move\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{,  }\item[{\mbox{\hyperlink{class_farm}{Farm}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+mengembalikan true jika duck bisa move ke position di dalam \mbox{\hyperlink{class_farm}{Farm}} 
+
+Reimplemented from \mbox{\hyperlink{class_animal_a0529aaf00a6368ea123110683cc4e2f2}{Animal}}.
+
+\mbox{\Hypertarget{class_duck_ada6104f405921dc1aaf38a7df72a8465}\label{class_duck_ada6104f405921dc1aaf38a7df72a8465}} 
+\index{Duck@{Duck}!getHabitat@{getHabitat}}
+\index{getHabitat@{getHabitat}!Duck@{Duck}}
+\subsubsection{\texorpdfstring{getHabitat()}{getHabitat()}}
+{\footnotesize\ttfamily std\+::string Duck\+::get\+Habitat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+mengembalikan habitat dari bebek (Coop) 
+
+Implements \mbox{\hyperlink{class_animal_a3de687fb42b792132a09176c4a0e2125}{Animal}}.
+
+\mbox{\Hypertarget{class_duck_a38e775e1f4ab667eeb997fb36837b456}\label{class_duck_a38e775e1f4ab667eeb997fb36837b456}} 
+\index{Duck@{Duck}!interactProduct@{interactProduct}}
+\index{interactProduct@{interactProduct}!Duck@{Duck}}
+\subsubsection{\texorpdfstring{interactProduct()}{interactProduct()}}
+{\footnotesize\ttfamily std\+::string Duck\+::interact\+Product (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+menentukan produk interaksi 
+
+Reimplemented from \mbox{\hyperlink{class_animal_a8e99d809fbff9cea27dee5a785932dc6}{Animal}}.
+
+\mbox{\Hypertarget{class_duck_a26799f737ee32fd2b7cd871ec1a2727f}\label{class_duck_a26799f737ee32fd2b7cd871ec1a2727f}} 
+\index{Duck@{Duck}!sound@{sound}}
+\index{sound@{sound}!Duck@{Duck}}
+\subsubsection{\texorpdfstring{sound()}{sound()}}
+{\footnotesize\ttfamily std\+::string Duck\+::sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+menentukan suara dari animal ini 
+
+Implements \mbox{\hyperlink{class_animal_aca8216576b21b87f761a34686a4968a8}{Animal}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Engi-\/s-\/\+Farm/\+Animal/\mbox{\hyperlink{_duck_8hpp}{Duck.\+hpp}}\end{DoxyCompactItemize}

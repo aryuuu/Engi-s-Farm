@@ -1,0 +1,97 @@
+\hypertarget{class_rabbit}{}\section{Rabbit Class Reference}
+\label{class_rabbit}\index{Rabbit@{Rabbit}}
+
+
+{\ttfamily \#include $<$Rabbit.\+hpp$>$}
+
+Inheritance diagram for Rabbit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_rabbit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rabbit_a524dc1e292bc748391550c81ae81336b}{Rabbit}} (\mbox{\hyperlink{class_position}{Position}} p)
+\item 
+bool \mbox{\hyperlink{class_rabbit_aedf048f173d55caa45576081f93dc931}{can\+Move\+To}} (\mbox{\hyperlink{class_position}{Position}}, \mbox{\hyperlink{class_farm}{Farm}}) const
+\item 
+std\+::string \mbox{\hyperlink{class_rabbit_a2bb761dcc6979ff6db93d253fbe7a3b0}{get\+Habitat}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_rabbit_a26169c2de4f8cf4f72d51c0796b96a37}{animal\+Type}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_rabbit_aa60f2e9bf2ca051d092c79c161b988b6}{sound}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_rabbit_a982b868df58d7ad6e7b4814f5fbe1473}{kill\+Product}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class chicken mendefinisikan tipe rabbit; Memiliki habitat di Grassland; Jika di-\/interact \+: tidak ada; Jika di-\/kill \+: Rabbit\+Meat 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rabbit_a524dc1e292bc748391550c81ae81336b}\label{class_rabbit_a524dc1e292bc748391550c81ae81336b}} 
+\index{Rabbit@{Rabbit}!Rabbit@{Rabbit}}
+\index{Rabbit@{Rabbit}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{Rabbit()}{Rabbit()}}
+{\footnotesize\ttfamily Rabbit\+::\+Rabbit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{p }\end{DoxyParamCaption})}
+
+konstruktor dari tipe rabbit 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rabbit_a26169c2de4f8cf4f72d51c0796b96a37}\label{class_rabbit_a26169c2de4f8cf4f72d51c0796b96a37}} 
+\index{Rabbit@{Rabbit}!animalType@{animalType}}
+\index{animalType@{animalType}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{animalType()}{animalType()}}
+{\footnotesize\ttfamily std\+::string Rabbit\+::animal\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+mengembalikan tipe animal (\mbox{\hyperlink{class_rabbit}{Rabbit}}) 
+
+Implements \mbox{\hyperlink{class_animal_a1969cf8cf77a7900207420ae26f856e9}{Animal}}.
+
+\mbox{\Hypertarget{class_rabbit_aedf048f173d55caa45576081f93dc931}\label{class_rabbit_aedf048f173d55caa45576081f93dc931}} 
+\index{Rabbit@{Rabbit}!canMoveTo@{canMoveTo}}
+\index{canMoveTo@{canMoveTo}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{canMoveTo()}{canMoveTo()}}
+{\footnotesize\ttfamily bool Rabbit\+::can\+Move\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{,  }\item[{\mbox{\hyperlink{class_farm}{Farm}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+mengembalikan true jika rabbit bisa move ke position di dalam \mbox{\hyperlink{class_farm}{Farm}} 
+
+Reimplemented from \mbox{\hyperlink{class_animal_a0529aaf00a6368ea123110683cc4e2f2}{Animal}}.
+
+\mbox{\Hypertarget{class_rabbit_a2bb761dcc6979ff6db93d253fbe7a3b0}\label{class_rabbit_a2bb761dcc6979ff6db93d253fbe7a3b0}} 
+\index{Rabbit@{Rabbit}!getHabitat@{getHabitat}}
+\index{getHabitat@{getHabitat}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{getHabitat()}{getHabitat()}}
+{\footnotesize\ttfamily std\+::string Rabbit\+::get\+Habitat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+mengembalikan habitat dari rabbit (Grassland) 
+
+Implements \mbox{\hyperlink{class_animal_a3de687fb42b792132a09176c4a0e2125}{Animal}}.
+
+\mbox{\Hypertarget{class_rabbit_a982b868df58d7ad6e7b4814f5fbe1473}\label{class_rabbit_a982b868df58d7ad6e7b4814f5fbe1473}} 
+\index{Rabbit@{Rabbit}!killProduct@{killProduct}}
+\index{killProduct@{killProduct}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{killProduct()}{killProduct()}}
+{\footnotesize\ttfamily std\+::string Rabbit\+::kill\+Product (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+menentukan produk hasil kill 
+
+Reimplemented from \mbox{\hyperlink{class_animal_a4d4e70aed7f889574600e8492f419948}{Animal}}.
+
+\mbox{\Hypertarget{class_rabbit_aa60f2e9bf2ca051d092c79c161b988b6}\label{class_rabbit_aa60f2e9bf2ca051d092c79c161b988b6}} 
+\index{Rabbit@{Rabbit}!sound@{sound}}
+\index{sound@{sound}!Rabbit@{Rabbit}}
+\subsubsection{\texorpdfstring{sound()}{sound()}}
+{\footnotesize\ttfamily std\+::string Rabbit\+::sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+menentukan suara dari animal ini 
+
+Implements \mbox{\hyperlink{class_animal_aca8216576b21b87f761a34686a4968a8}{Animal}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Engi-\/s-\/\+Farm/\+Animal/\mbox{\hyperlink{_rabbit_8hpp}{Rabbit.\+hpp}}\end{DoxyCompactItemize}
