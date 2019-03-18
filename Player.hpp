@@ -1,9 +1,9 @@
-#include 'LinkedList'
+#include "LinkedList.cpp"
 #include <iostream>
 class Player{
 	private:
-		int water // Jumlah kapasitas gembor (Alat penyiraman) yang tersisa untuk menyiram rumput
-		int money // Jumlah uang yang dimiliki player
+		int water; // Jumlah kapasitas gembor (Alat penyiraman) yang tersisa untuk menyiram rumput
+		int money; // Jumlah uang yang dimiliki player
 		int x,y; // Posisi Absis dan Ordinat player
 		LinkedList<Product> bag; // List yang menyimpan produk yang dihasilkan dari hewan
 	public:

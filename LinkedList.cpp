@@ -12,22 +12,23 @@ template <class T>
 class LinkedList{
 public:
     int length;
-    Node* head;
+    Node<T>* head;
 
     LinkedList();
-    int find(T element) const //Mengembalikan indeks dimana elemen ditemukan, -1 jika tidak ada
-	bool isEmpty() const //Mengembalikan True jika linked list kosong
-	void add(T element) //Menambahkan elemen sebagai elemen paling akhir
-	void remove(T element) //Membuang elemen dari linked list
-	T get(int indeks) const //Mengembalikan elemen pada indeks
+    int find(T element) const; //Mengembalikan indeks dimana elemen ditemukan, -1 jika tidak ada
+	bool isEmpty() const; //Mengembalikan True jika linked list kosong
+	void add(T element); //Menambahkan elemen sebagai elemen paling akhir
+	void remove(T element); //Membuang elemen dari linked list
+	T get(int indeks) const; //Mengembalikan elemen pada indeks
 };
-LinkedList::LinkedList(){
+template <class T>
+LinkedList<T>::LinkedList(){
     this->length = 0;
     this->head = NULL;
 }
 template <class T>
-int LinkedList::find(T element) const{
-	Node* itr = head;
+int LinkedList<T>::find(T element) const{
+	Node<T>* itr = head;
 	bool found = false;
 	int posisi=1;
 	while(itr!=NULL && not(found)){
@@ -44,13 +45,13 @@ int LinkedList::find(T element) const{
 	return posisi;
 }
 template <class T>
-bool LinkedList::isEmpty() const{
+bool LinkedList<T>::isEmpty() const{
 	return (length==0);
 }
 template <class T>
-void LinkedList::add(T element){
-    Node* node = new Node();
-    Node* itr = head;
+void LinkedList<T>::add(T element){
+    Node<T>* node = new Node<T>();
+    Node<T>* itr = head;
 	node->data = element;
 	if (head!=NULL){
 	    while (itr->next!=NULL){
@@ -64,9 +65,9 @@ void LinkedList::add(T element){
     this->length++;
 }
 template <class T>
-void LinkedList::remove(T element) {
-	Node* itr = head;
-	pos=find(T element);
+void LinkedList<T>::remove(T element) {
+	Node<T>* itr = head;
+	int pos=find(element);
 	while (--pos>0){
 		itr=itr->next;
 	}
@@ -78,8 +79,8 @@ void LinkedList::remove(T element) {
 	}
 }
 template <class T>
-T LinkedList::get(int indeks) const{
-	Node* itr = head;
+T LinkedList<T>::get(int indeks) const{
+	Node<T>* itr = head;
 	while(--indeks){
 		itr=itr->next;
 	}
