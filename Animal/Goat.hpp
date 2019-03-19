@@ -25,14 +25,11 @@ public:
   /** konstruktor dari tipe animal ini */
   Goat(Position p);
 
-  /** mengembalikan true jika goat bisa move ke position di dalam Farm */
-  bool canMoveTo(Position, Farm) const;
-
   /** mengembalikan habitat dari kambing (Barn) */
   std::string getHabitat() const;
   /** mengembalikan tipe animal (Goat) */
   std::string animalType() const;
-  /** menentukan suara dari animal ini */      
+  /** menentukan suara dari animal ini */
   std::string sound() const;
 };
 
