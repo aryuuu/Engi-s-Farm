@@ -14,31 +14,12 @@ public:
 	*constructor
 	**/
 	ButterMilkChicken(string nama, int harga);
-	/**
-	*getter
-	**/
-	/**
-	*mengembalikan harga
-	**/
-	int getHarga() const;
 
 	/**
-	*mengembalikan nama
+	*mengembalikan true jika FarmProduct
+	*yang dimiliki Player memenuhi resep untuk membuat ButtermilkChicken
 	**/
-	string getNama() const;
+	bool available(Player P);
 
-	/**
-	*setter
-	**/
-	/**
-	*set harga 
-	**/
-	void setHarga() const;
-	/**
-	*set nama 
-	**/
-	void setNama() const;
-	
-	
 };
 #endif

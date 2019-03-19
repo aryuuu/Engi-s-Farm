@@ -38,11 +38,11 @@ class Product{
 		/**
 		*set harga produk
 		**/
-		virtual void setHarga();
+		virtual void setHarga(int h);
 		/**
 		*set nama produk
 		**/
-		virtual void setNama();
+		virtual void setNama(string n);
 		
 };
 

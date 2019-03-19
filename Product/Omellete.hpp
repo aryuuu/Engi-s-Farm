@@ -14,30 +14,12 @@ public:
 	*constructor
 	**/
 	Omellete(string nama, int harga);
-	/**
-	*getter
-	**/
-	/**
-	*mengembalikan harga
-	**/
-	int getHarga() const;
-	/**
-	*mengembalikan nama
-	**/
-	string getNama() const;
 
 	/**
-	*setter
+	*mengembalikan true jika FarmProduct
+	*yang dimiliki Player memenuhi resep untuk membuat Omellete
 	**/
-	/**
-	*set harga 
-	**/
-	void setHarga() const;
-	/**
-	*set nama 
-	**/
-	void setNama() const;
-	
+	bool available(Player P);
 	
 };
 #endif

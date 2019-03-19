@@ -16,29 +16,10 @@ public:
 	Meatball(string nama, int harga);
 
 	/**
-	*getter
+	*mengembalikan true jika FarmProduct
+	*yang dimiliki Player memenuhi resep untuk membuat Meatball
 	**/
-	/**
-	*mengembalikan harga
-	**/
-	int getHarga() const;
-	/**
-	*mengembalikan nama
-	**/
-	string getNama() const;
-
-	/**
-	*setter
-	**/
-	/**
-	*set harga 
-	**/
-	void setHarga() const;
-	/**
-	*set nama 
-	**/
-	void setNama() const;
-	
+	bool available(Player P);
 	
 };
 #endif
