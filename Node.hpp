@@ -12,7 +12,7 @@ template <class T>
   * Memiliki atribut data dan next; */	
 class Node{
 public:
-    Node* next;
-    T data;
+    Node* next;	// posisi node selanjutnya
+    T data;	// Isi dari node
 };
 #endif
