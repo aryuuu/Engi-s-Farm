@@ -1,5 +1,19 @@
-#include "LinkedList.cpp"
+/**
+  * @file Player.hpp
+  * @author SubscribeToPewDiePie
+  * @brief File berisi method dan atribut dari class Player
+  * @version 1
+  * @date 2019-03-19
+  */
+  
+#include "LinkedList.hpp"
+#include "Product.hpp"
 #include <iostream>
+#ifndef _PLAYER_HPP
+#define _PLAYER_HPP
+/** Class Player mendefinisikan tipe pemain;
+  * Memiliki tas,posisi x dan y, uang , dan air;
+  * Method beruhungan dengan pergerakan pemain dan perintah seperti talk, interact, dan kill; */	
 class Player{
 	private:
 		int water; // Jumlah kapasitas gembor (Alat penyiraman) yang tersisa untuk menyiram rumput
@@ -28,3 +42,4 @@ class Player{
 		void addWater(); //Mengisi gebor dengan air secara maksimal (sesuai kapasitas) dengan mengubah atribut water 
 		void addMoney(int harga); //Menambah atribut money sesuai dengan harga
 };
+#endif
