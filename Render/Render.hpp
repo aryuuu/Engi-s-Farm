@@ -7,6 +7,8 @@
   */
 
 #include "Cell.hpp"
+#include "../Player.hpp"
+#include "../Animal/AnimalContainer.hpp"
 
 #ifndef _RENDER_HPP
 #define _RENDER_HPP
@@ -34,6 +36,21 @@ public:
 
     /** Print Map Ke Layar*/
     void print();
+
+    /** Cek apakah player valid untuk move lalu move player*/
+    void movePlayer(Player P,AnimalContainer AC);
+
+    /** Membunuh Animal*/
+    void playerKill(Player P,AnimalContainer AC);
+
+    /** Untuk interaksi dengan animal*/
+    void playerInteract(Player P,AnimalContainer AC);
+
+    /** Untuk cek animal valid untuk move lalu move animal*/
+    void moveAnimal(Player P,AnimalContainer AC);
+
+    /** Fungsi agar animal yang berada pada grass maka akan dimakan*/
+    void allAnimalEatGrass(Player P,AnimalContainer AC);
 };
 
 #endif
