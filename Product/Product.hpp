@@ -18,10 +18,7 @@ class Product{
 		**/
 		const string nama; 
 	public :
-		/**
-		*constructor
-		**/
-		Product(int h, int n);
+
 
 		/**
 		*getter 
