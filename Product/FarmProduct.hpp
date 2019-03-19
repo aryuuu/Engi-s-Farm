@@ -10,10 +10,14 @@
 **/
 class FarmProduct: public Product{
 private:
-
+	/**
+	*tidak ada atribut
+	**/
 
 public:
-	
+	/**
+	*tidak ada method
+	**/
 
 };
 

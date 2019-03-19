@@ -9,20 +9,15 @@
 **/
 class CowMilk: public FarmProduct{
 private:
-
+	/**
+	*tidak ada atribut
+	**/
 public:
 	/**
 	*constructor
 	**/
 	CowMilk(string nama, int harga);
-	/**
-	*set nama produk
-	**/
-	void setNama(string n);
-	/**
-	*mengembalikan nama produk
-	**/
-	string getNama() const;
+
 }
 
 #endif

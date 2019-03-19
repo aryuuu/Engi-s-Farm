@@ -9,6 +9,9 @@
 **/
 class SideProduct: public Product{
 private:
+	/**
+	*tidak ada atribut
+	**/
 	
 public:
 	/**
