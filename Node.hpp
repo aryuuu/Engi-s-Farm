@@ -8,7 +8,7 @@
 #ifndef _NODE_HPP
 #define _NODE_HPP
 template <class T>
-/** Class Player mendefinisikan tipe pemain;
+/** Class Node mendefinisikan sebuah node dalam list;
   * Memiliki atribut data dan next; */	
 class Node{
 public:
