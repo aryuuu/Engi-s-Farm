@@ -19,10 +19,10 @@ public:
     //Ctor
     Truck(int x,int y);
 
-    //Print Well Pada Layar
+    /**Print Well Pada Layar*/
     void print();
 
-    //Tempat Player Menjual Inventory
+    /**Tempat Player Menjual Inventory*/
     void action(Player& P);
 };
 

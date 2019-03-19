@@ -19,10 +19,10 @@ public:
     //Ctor
     Well(int x,int y);
 
-    //Print Well Pada Layar
+    /**Print Well Pada Layar*/
     void print();
 
-    //Menambah Air Pada Player
+    /**Menambah Air Pada Player*/
     void action(Player& P);
 };
 

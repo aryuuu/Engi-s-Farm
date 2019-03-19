@@ -22,17 +22,17 @@ public:
     //Ctor
     Render(int maxX,int maxY);
 
-    //Getter
+    /** Getter */
     int getMaxX();
     int getMaxY();
     std::string getLegendCell(int x,int y);
 
-    //Setter
+    /** Setter */
     void setMaxX(int x);
     void setMaxY(int y);
     void setLegendCell(std::string Legend,int x,int y);
 
-    //Print
+    /** Print Map Ke Layar*/
     void print();
 };
 

@@ -17,15 +17,15 @@ private:
     int x,y; // Position of the cell
 public:
 
-    // Getter
+    /** Getter */
     int getPosX();
     int getPosY();
 
-    // Setter
+    /** Setter */
     void setPosX();
     void setPosY();
 
-    //Abstract Function
+    /** Abstract Function */
     virtual void print() = 0;
 };
 

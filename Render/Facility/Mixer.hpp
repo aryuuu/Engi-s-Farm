@@ -19,10 +19,10 @@ public:
     //Ctor
     Mixer(int x,int y);
 
-    //Print Well Pada Layar
+    /**Print Well Pada Layar*/
     void print();
 
-    //Menggabunggkan Farm Product Menjadi Side Product
+    /**Menggabunggkan Farm Product Menjadi Side Product*/
     void action(Player& P);
 };
 

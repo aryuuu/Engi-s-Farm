@@ -23,18 +23,18 @@ class Land : public Cell
     //Ctor
     Land(std::string legend,std::string category,bool isGrass,int x,int y);
 
-    //Setter
+    /** Setter */
     void setCategory(std::string category);
     void setIsGrass(bool isGrass);
 
-    //Getter
+    /** Getter */
     std::string getCategory();
     bool getIsGrass();
 
-    //Fungsi Print Isi dari Land
+    /** Fungsi Print Isi dari Land */
     void print(AnimalContainer AC,Player P);
 
-    //Fungsi Water untuk mengubah isGrass saat sebuah land disiram
+    /** Fungsi Water untuk mengubah isGrass saat sebuah land disiram */
     void water();
 
 };
