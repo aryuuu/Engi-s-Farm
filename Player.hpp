@@ -35,10 +35,10 @@ class Player{
 		void setBag(int idx); //mengubah nilai atribut LinkedList pada indeks idx
 		
 		void playerMove(char move); //Memindahkan posisi player ke atas / kanan / bawah / kiri dengan parameter input charr u/r/d/l dan posisi harus valid (harus divalidasi dulu)
-		void delBag(string NamaProduct); //Menghapus product dari bag dengan parameter input NamaProduct
-		void delBagAll(); //Mengosongkan Bag
+		void delProduct(string NamaProduct); //Menghapus product dari bag dengan parameter input NamaProduct
+		void delProductAll(); //Mengosongkan Bag
 		void reduceWater(); //Mengkurangi atribut water yang ada didalam gebor (Alat penyiraman)
-		void addBag(Product Prod); //Menambahkan Product Prod ke Bag dan ditaruh di paling belakang
+		void addProduct(Product Prod); //Menambahkan Product Prod ke Bag dan ditaruh di paling belakang
 		void addWater(); //Mengisi gebor dengan air secara maksimal (sesuai kapasitas) dengan mengubah atribut water 
 		void addMoney(int harga); //Menambah atribut money sesuai dengan harga
 };
