@@ -18,6 +18,9 @@ private:
     const std::string legend;
 public:
 
+    //Getter
+    std::string getLegend();
+
     //Abstract Function
     virtual void print() = 0;
     virtual void action(Player& P) = 0;
