@@ -37,7 +37,7 @@ public:
   std::string sound() const;
   /** menentukan produk interaksi */
   std::string interactProduct() const;
-  /** menentukan produk hasil kill */ 
+  /** menentukan produk hasil kill */
   std::string killProduct() const;
 };
 

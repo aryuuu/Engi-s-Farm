@@ -23,9 +23,9 @@ public:
   int getAbsis();
   /** mengembalikan nilai y*/
   int getOrdinat();
-  /** set nilai y*/
+  /** set nilai x*/
   void setAbsis(int);
-  /** set nilai x*/       
+  /** set nilai y*/       
   void setOrdinat(int);
 };
 

@@ -26,9 +26,6 @@ public:
   /** konstruktor dari tipe rabbit */
   Rabbit(Position p);
 
-  /** mengembalikan true jika rabbit bisa move ke position di dalam Farm */
-  bool canMoveTo(Position, Farm) const;
-
   /** mengembalikan habitat dari rabbit (Grassland) */
   std::string getHabitat() const;
   /** mengembalikan tipe animal (Rabbit) */

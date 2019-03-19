@@ -7,7 +7,6 @@
   */
 
 #include "Position.hpp"
-#include "Farm.hpp"
 #include <string>
 
 #ifndef _ANIMAL_HPP
@@ -25,7 +24,7 @@ private:
 public:
   /** ctor
     * konstruktor kelas binatang yang menentukan lokasi binatang tersebut
-    * set posisi dengan p, notEatenC ke 0, dan hungry ke true */
+    * set posisi dengan p, notEatenC ke 0, dan hungry ke false */
   Animal(Position p);
 
   // getter-setter
@@ -58,12 +57,8 @@ public:
 
   /** memberikan posisi random (atas, bawah, kiri, atau kanan) dari binatang tersebut */
   Position randomMove();
-  /** menghasilkan posisi animal bergerak yang valid */
-  void animalMove();
 
   /** mengembalikan true jika animal bisa move ke position di dalam Farm */
-  virtual bool canMoveTo(Position, Farm) const;
-  /** mengembalikan nilai false sebelum dioverride oleh interactProduct anaknya */
   virtual bool canBeInteracted() const;
   /** mengembalikan nilai false sebelum dioverride oleh killProduct anaknya */
   virtual bool canBeKilled() const;

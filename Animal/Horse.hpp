@@ -25,16 +25,13 @@ public:
   /** konstruktor dari tipe horse */
   Horse(Position p);
 
-  /** mengembalikan true jika horse bisa move ke position di dalam Farm */
-  bool canMoveTo(Position, Farm);
-
   /** mengembalikan habitat dari horse (Grassland) */
   std::string getHabitat() const;
   /** mengembalikan tipe animal (Horse) */
   std::string animalType() const;
   /** menentukan suara dari animal ini */
   std::string sound() const;
-  /** menentukan produk interaksi */          
+  /** menentukan produk interaksi */
   std::string interactProduct() const;
 };
 

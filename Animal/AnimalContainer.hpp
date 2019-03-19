@@ -9,8 +9,6 @@
 #include "Position.hpp"
 #include "Animal.hpp"
 #include "LinkedList.hpp"
-#include "Player.hpp"
-#include "Farm.hpp"
 
 #ifndef _ANIMAL_CONTAINER_HPP
 #define _ANIMAL_CONTAINER_HPP
@@ -19,8 +17,8 @@
 class AnimalContainer
 {
 private:
-  LinkedList<Animal*> animalList;
-  int NumAnimal;
+  LinkedList<Animal*> animalList;     // menandakan animal-animal yang masih hidup di farm
+  int NumAnimal;                      // menandakan jumlah animal yang terdapat dalam farm
 public:
   // ctor
   /** membentuk container animal dengan animal kosong*/
@@ -42,10 +40,10 @@ public:
   /** mengembalikan animal pertama yang ditemukan yang memiliki posisi di atas, bawah, kiri, atau kanan */
   Animal* findNear(Position);
 
-  /** mengembalikan true jika tidak ada animal atau player to position tersebut*/
-  bool noAnimalorPlayerOn(Player, Position);
+  /** mengembalikan true jika tidak ada animal di position tersebut*/
+  bool noAnimalOn(Position);
 
-  /** menggerakkan seluruh animal di dalam list ini*/
+  /** menggerakkan seluruh animal di dalam list ini dengan move tidak valid (divalidkan dengan Render)*/
   void allAnimalMove();
   /** menambahkan tingkat kelaparan setiap animal (notEatenC)*/
   void allAnimalHungrier();
