@@ -25,16 +25,13 @@ public:
   /** konstruktor dari tipe animal ini */
   Duck(Position p);
 
-   /** mengembalikan true jika duck bisa move ke position di dalam Farm*/
-  bool canMoveTo(Position, Farm) const;
-
   /** mengembalikan habitat dari bebek (Coop)*/
   std::string getHabitat() const;
   /** mengembalikan tipe animal (Duck)*/
   std::string animalType() const;
   /** menentukan suara dari animal ini*/
   std::string sound() const;
-  /** menentukan produk interaksi*/          
+  /** menentukan produk interaksi*/
   std::string interactProduct() const;
 };
 

@@ -30,9 +30,6 @@ public:
   /** Konstruktor tipe khusus animal ini */
   Chicken(Position p);
 
-  /** mengembalikan true jika chicken bisa move ke position di dalam Farm */
-  bool canMoveTo(Position, Farm) const;
-
   /** mengembalikan habitat tempat hidup ayam */
   std::string getHabitat() const;
   /** mengembalikan tipe animal (Chicken) */

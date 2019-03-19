@@ -6,7 +6,6 @@
   * @date 2019-03-18
   */
 
-#include "Position.hpp"
 #include "Animal.hpp"
 #include "LinkedList.hpp"
 

@@ -26,9 +26,6 @@ public:
   /** Konstruktor tipe khusus animal ini */
   Cow(Position p);
 
-  /** mengembalikan true jika cow bisa move ke position di dalam Farm */
-  bool canMoveTo(Position, Farm) const;
-
   /** mengembalikan habitat dari sapi (Barn) */
   std::string getHabitat() const;
   /** mengembalikan tipe animal (Cow) */
