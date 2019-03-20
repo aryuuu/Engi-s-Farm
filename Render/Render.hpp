@@ -16,14 +16,19 @@
 class Render
 {
 private:
-    Cell ** farm; // Tempat Menyimpan Map dari Farm (Cell Harus Dibuat Pointer)
+    Cell *** farm; // Tempat Menyimpan Map dari Farm (Cell Harus Dibuat Pointer)
     // Penanda Max Element
     int maxX;
     int maxY;
+    Player P;
+    AnimalContainer AC;
 public:
     //Ctor
-    Render(int maxX,int maxY);
+    Render(int maxX,int maxY,Player P,AnimalContainer AC);
 
+    //Dtor
+    ~Render();
+ 
     /** Getter */
     int getMaxX();
     int getMaxY();
@@ -38,19 +43,19 @@ public:
     void print();
 
     /** Cek apakah player valid untuk move lalu move player*/
-    void movePlayer(Player P,AnimalContainer AC);
+    void movePlayer();
 
     /** Membunuh Animal*/
-    void playerKill(Player P,AnimalContainer AC);
+    void playerKill();
 
     /** Untuk interaksi dengan animal*/
-    void playerInteract(Player P,AnimalContainer AC);
+    void playerInteract();
 
     /** Untuk cek animal valid untuk move lalu move animal*/
-    void moveAnimal(Player P,AnimalContainer AC);
+    void moveAnimal();
 
     /** Fungsi agar animal yang berada pada grass maka akan dimakan*/
-    void allAnimalEatGrass(Player P,AnimalContainer AC);
+    void allAnimalEatGrass();
 };
 
 #endif
