@@ -1,0 +1,11 @@
+C:\Users\Meyjan\AppData\Local\Temp\ccT7gD7e.o:Animal.cpp:(.text+0x30): undefined reference to `Position::Position()'
+C:\Users\Meyjan\AppData\Local\Temp\ccT7gD7e.o:Animal.cpp:(.text+0x176): undefined reference to `Position::operator==(Position const&)'
+C:\Users\Meyjan\AppData\Local\Temp\ccT7gD7e.o:Animal.cpp:(.text+0x18f): undefined reference to `Position::getAbsis()'
+C:\Users\Meyjan\AppData\Local\Temp\ccT7gD7e.o:Animal.cpp:(.text+0x19a): undefined reference to `Position::getOrdinat()'
+C:\Users\Meyjan\AppData\Local\Temp\ccT7gD7e.o:Animal.cpp:(.text+0x1bc): undefined reference to `Position::getAbsis()'
+C:\Users\Meyjan\AppData\Local\Temp\ccT7gD7e.o:Animal.cpp:(.text+0x1cc): undefined reference to `Position::getOrdinat()'
+C:\Users\Meyjan\AppData\Local\Temp\ccT7gD7e.o:Animal.cpp:(.text+0x1e6): undefined reference to `Position::Position(int, int)'
+C:\Users\Meyjan\AppData\Local\Temp\ccT7gD7e.o:Animal.cpp:(.rdata$_ZTV6Animal[__ZTV6Animal]+0x1c): undefined reference to `Animal::interactProduct[abi:cxx11]()'
+C:\Users\Meyjan\AppData\Local\Temp\ccT7gD7e.o:Animal.cpp:(.rdata$_ZTV6Animal[__ZTV6Animal]+0x20): undefined reference to `Animal::killProduct[abi:cxx11]()'
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(main.o):(.text.startup+0xa0): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
