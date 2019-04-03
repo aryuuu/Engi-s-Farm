@@ -12,7 +12,7 @@
 #define _MEAT_PRODUCING_ANIMAL_HPP
 
 /** Class berisi setiap animal yang dapat menghasilkan daging */
-class MeatProducingAnimal: public Animal
+class MeatProducingAnimal: virtual public Animal
 {
 private:
   // tidak ada atribut

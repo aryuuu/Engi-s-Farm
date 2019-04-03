@@ -3,7 +3,7 @@
 using namespace std;
 
 /** Konstruktor tipe khusus animal ini */
-Cow::Cow(Position p): MeatProducingAnimal(p), MilkProducingAnimal(p)
+Cow::Cow(Position p): Animal(p), MeatProducingAnimal(p), MilkProducingAnimal(p)
 {}
 
 /** mengembalikan habitat tempat hidup sapi */

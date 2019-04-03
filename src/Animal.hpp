@@ -20,7 +20,8 @@ private:
   const int hungryNotEatenC = 10; // angka di mana hewan mulai kelaparan
   Position loc;               // mengembalikan posisi dari sebuah binatang
   int notEatenC;              // counter menghitung berapa turn terlewati setelah animal tidak makan
-  bool hungry;                // menentukan apakah binatang tersebut lapar atau tidak
+  bool hasEaten;              // menentukan apakah binatang telah makan atau tidak
+
 public:
   /** ctor
     * konstruktor kelas binatang yang menentukan lokasi binatang tersebut
@@ -32,22 +33,22 @@ public:
   Position getLocation() const;
   /** mengembalikan nilai dari notEatenC */
   int getNotEatenC() const;
-  /** mengembalikan nilai boolean hungry */
-  bool getHungry() const;
+  /** menentukan animal pernah makan atau tidak */
+  bool getHasEaten() const;
   /** mengeset posisi dari animal tersebut */
   void setLocation(Position p);
   /** mengeset nilai notEatenC dari animal tersebut */
   void setNotEatenC(int p);
-  /** mengeset binatang menjadi lapar */
-  void setHungry();
-  /** mengeset binatang menjadi kenyang */
-  void setFull();
+  /** mengeset binatang menjadi sudah pernah makan (hasEaten = true)*/
+  void setHasEaten(bool eaten);
 
   // fungsi-fungsi lain
   /** mengeset nilai dari notEatenC = 0 */
-  void hasEaten();
+  void animalHasEaten();
   /** menambahkan nilai dari notEatenC */
   void hungrier();
+  /** menandakan kalau animal tersebut telah lapar (counter melebihi 10) */
+  bool isHungry() const;
   /** menandakan kalau animal tersebut layak mati (terlalu lama tidak makan) */
   bool isDead() const;
   /** memberi nilai true jika berada di posisi p */

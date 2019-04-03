@@ -3,7 +3,7 @@
 using namespace std;
 
 /** Konstruktor tipe khusus animal ini */
-Duck::Duck(Position p): EggProducingAnimal(p)
+Duck::Duck(Position p): Animal(p), EggProducingAnimal(p)
 {}
 
 /** mengembalikan habitat tempat hidup bebek */

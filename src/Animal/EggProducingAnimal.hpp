@@ -12,7 +12,7 @@
 #define _EGG_PRODUCING_ANIMAL_HPP
 
 /** Class berisi setiap animal yang dapat menghasilkan telur */
-class EggProducingAnimal: public Animal
+class EggProducingAnimal: virtual public Animal
 {
 private:
   // tidak ada atribut

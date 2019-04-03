@@ -3,7 +3,7 @@
 using namespace std;
 
 /** Konstruktor tipe khusus animal ini */
-Horse::Horse(Position p): MilkProducingAnimal(p)
+Horse::Horse(Position p): Animal(p), MilkProducingAnimal(p)
 {}
 
 /** mengembalikan habitat tempat hidup kuda */

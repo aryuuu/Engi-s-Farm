@@ -9,7 +9,7 @@ Animal::Animal(Position p)
 {
   loc = p;
   notEatenC = 0;
-  hungry = false;
+  hasEaten = false;
 }
 
 // getter-setter
@@ -24,9 +24,9 @@ int Animal::getNotEatenC() const
   return notEatenC;
 }
 /** mengembalikan nilai boolean hungry */
-bool Animal::getHungry() const
+bool Animal::getHasEaten() const
 {
-  return hungry;
+  return hasEaten;
 }
 /** mengeset posisi dari animal tersebut */
 void Animal::setLocation(Position p)
@@ -38,37 +38,33 @@ void Animal::setNotEatenC(int p)
 {
   notEatenC = p;
 }
-/** mengeset binatang menjadi lapar */
-void Animal::setHungry()
+/** mengeset binatang menjadi sudah pernah makan */
+void Animal::setHasEaten(bool eaten)
 {
-  hungry = true;
-}
-/** mengeset binatang menjadi kenyang */
-void Animal::setFull()
-{
-  hungry = false;
+  hasEaten = eaten;
 }
 
 // fungsi-fungsi lain
 /** mengeset nilai dari notEatenC = 0 */
-void Animal::hasEaten()
+void Animal::animalHasEaten()
 {
   notEatenC = 0;
-  hungry = false;
+  hasEaten = true;
 }
 /** menambahkan nilai dari notEatenC */
 void Animal::hungrier()
 {
   notEatenC++;
-  if (notEatenC >= hungryNotEatenC)
-  {
-    hungry = true;
-  }
+}
+/** menandakan kalau animal tersebut telah lapar (counter melebihi 10) */
+bool Animal::isHungry() const
+{
+  return notEatenC >= hungryNotEatenC;
 }
 /** menandakan kalau animal tersebut layak mati (terlalu lama tidak makan) */
 bool Animal::isDead() const
 {
-  return hungry == maxNotEatenC;
+  return notEatenC >= maxNotEatenC;
 }
 /** memberi nilai true jika berada di posisi p */
 bool Animal::isPosition(Position p) const

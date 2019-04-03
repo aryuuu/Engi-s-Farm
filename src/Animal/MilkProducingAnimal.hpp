@@ -12,7 +12,7 @@
 #define _MILK_PRODUCING_ANIMAL_HPP
 
 /** Class berisi setiap animal yang dapat menghasilkan susu */
-class MilkProducingAnimal: public Animal
+class MilkProducingAnimal: virtual public Animal
 {
 private:
   // tidak ada atribut

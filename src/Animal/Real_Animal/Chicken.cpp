@@ -3,7 +3,7 @@
 using namespace std;
 
 /** Konstruktor tipe khusus animal ini */
-Chicken::Chicken(Position p): EggProducingAnimal(p), MeatProducingAnimal(p)
+Chicken::Chicken(Position p): Animal(p), EggProducingAnimal(p), MeatProducingAnimal(p)
 {}
 
 /** mengembalikan habitat tempat hidup ayam */

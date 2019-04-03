@@ -11,4 +11,4 @@ public:
 
   int getAbsis();           // mengembalikan nilai x
   int getOrdinat();         // mengembalikan nilai y
-}
+};

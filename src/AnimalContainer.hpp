@@ -16,7 +16,7 @@
 class AnimalContainer
 {
 private:
-  LinkedList<Animal*> animalList;     // menandakan animal-animal yang masih hidup di farm
+  LinkedList<Animal*>* animalList;     // menandakan animal-animal yang masih hidup di farm
   int NumAnimal;                      // menandakan jumlah animal yang terdapat dalam farm
 public:
   // ctor
@@ -29,7 +29,7 @@ public:
   /** mengembalikan jumlah animal yang ada*/
   int getNumAnimal();
   /** mengeset nilai Animal pada urutan ke-i*/
-  void setAnimal(Animal*, int);
+  void setAnimal(Animal* ani, int a);
 
   // fungsi-fungsi lain
   /** menambahkan animal tertentu ke dalam animalList*/

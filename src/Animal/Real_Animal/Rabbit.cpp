@@ -3,7 +3,7 @@
 using namespace std;
 
 /** Konstruktor tipe khusus animal ini */
-Rabbit::Rabbit(Position p): MeatProducingAnimal(p)
+Rabbit::Rabbit(Position p): Animal(p), MeatProducingAnimal(p)
 {}
 
 /** mengembalikan habitat tempat hidup kelinci */
