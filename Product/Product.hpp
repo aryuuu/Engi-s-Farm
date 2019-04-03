@@ -21,7 +21,8 @@ class Product{
 		string nama; 
 	public :
 
-
+		//cotr
+		Product::Product();
 		/**
 		*getter 
 		**/
@@ -46,6 +47,9 @@ class Product{
 		**/
 		void setNama(string n);
 		
+
+		//mengembalikan 1 jika nama produk sama 
+		int sama(Product);
 };
 
 

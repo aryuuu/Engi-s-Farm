@@ -2,6 +2,13 @@
 #include <iostream>
 using namespace std;
 
+//ctor buat bikin list
+Product::Product(){
+	this.setNama("-");
+	this.getHarga(-1);
+}
+
+
 /**
 *mengembalikan nama dari produk
 **/
@@ -28,4 +35,13 @@ void Product::setHarga(int h){
 **/
 void Product::setNama(string n){
 	this->nama = n;
+}
+
+//mengembalikan 1 jika nama produk sama 
+int Product::sama(Product P){
+	if(this->getNama() == P.getNama()){
+		return 1;
+	} else {
+		return 0;
+	}
 }
