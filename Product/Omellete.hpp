@@ -8,12 +8,13 @@
 **/
 class Omellete: public SideProduct{
 private:
-
+//harga produk
+	const int price = 15000;
 public:
 	/**
 	*constructor
 	**/
-	Omellete(string nama, int harga);
+	Omellete();
 
 	/**
 	*mengembalikan true jika FarmProduct

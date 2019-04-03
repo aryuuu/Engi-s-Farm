@@ -6,14 +6,15 @@
 *merupakan kelas hasil olahan
 *ChickenMeat dan CowMilk
 **/
-class ButterMilkChicken: public SideProduct{
+class ButtermilkChicken: public SideProduct{
 private:
-
+	//harga produk
+	const int price = 45000;
 public:
 	/**
 	*constructor
 	**/
-	ButterMilkChicken(string nama, int harga);
+	ButtermilkChicken();
 
 	/**
 	*mengembalikan true jika FarmProduct

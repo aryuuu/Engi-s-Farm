@@ -8,12 +8,13 @@
 **/
 class Meatball: public SideProduct{
 private:
-
+	//harga produk
+	const int price = 150000;
 public:
 	/**
 	*constructor
 	**/
-	Meatball(string nama, int harga);
+	Meatball();
 
 	/**
 	*mengembalikan true jika FarmProduct

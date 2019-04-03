@@ -1,6 +1,8 @@
 #ifndef PRODUCT_HPP
 #define PRODUCT_HPP
+#include <iostream>
 
+using namespace std;
 
 /**kelas Product merupakan kelas yang menggambarkan
 *segala jenis produk yang didapat
@@ -12,11 +14,11 @@ class Product{
 		/**
 		*harga produk
 		**/
-		const int harga; 
+		int harga; 
 		/**
 		*nama produk
 		**/
-		const string nama; 
+		string nama; 
 	public :
 
 
@@ -26,11 +28,11 @@ class Product{
 		/**
 		*mengembalikan harga produk
 		**/
-		virtual int getHarga() const;
+		int getHarga() const;
 		/**
 		*mengembalikan nama produk
 		**/
-		virtual string getNama() const;
+		string getNama() const;
 
 		/**
 		*setter 
@@ -38,11 +40,11 @@ class Product{
 		/**
 		*set harga produk
 		**/
-		virtual void setHarga(int h);
+		void setHarga(int h);
 		/**
 		*set nama produk
 		**/
-		virtual void setNama(string n);
+		void setNama(string n);
 		
 };
 

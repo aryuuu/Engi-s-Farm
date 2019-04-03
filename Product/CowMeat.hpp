@@ -10,14 +10,15 @@
 class CowMeat: public FarmProduct{
 private:
 	/**
-	*tidak ada atribut
+	*harga produk
 	**/
+	const int price = 100000;
 public:
 	/**
 	*constructor
 	**/
-	CowMeat(string nama, int harga);
+	CowMeat();
 
-}
+};
 
 #endif

@@ -9,13 +9,16 @@
 **/
 class HorseMilk: public FarmProduct{
 private:
-
+	/**
+	*harga produk
+	**/
+	const int price = 120000;
 public:
 	/**
 	*constructor
 	**/
-	HorseMilk(string nama, int harga);
+	HorseMilk();
 
-}
+};
 
 #endif
