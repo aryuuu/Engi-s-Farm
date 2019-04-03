@@ -1,3 +1,11 @@
+/**
+  * @file Horse.cpp
+  * @author SubscribeToPewDiePie
+  * @brief File berisi method dan atribut dari class Chicken
+  * @version 1
+  * @date 2019-04-04
+  */
+
 #include "Horse.hpp"
 #include <iostream>
 using namespace std;

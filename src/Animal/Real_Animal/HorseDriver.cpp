@@ -1,5 +1,5 @@
 /**
-  * @file ChickenDriver.cpp
+  * @file HorseDriver.cpp
   * @author SubscribeToPewDiePie
   * @brief File berisi method dan atribut dari class Chicken
   * @version 1
@@ -7,19 +7,19 @@
   */
 
 // Compile
-// g++ Position.cpp Animal.cpp Animal/EggProducingAnimal.cpp Animal/MeatProducingAnimal.cpp Animal/MilkProducingAnimal.cpp Animal/Real_Animal/Chicken.cpp Animal/Real_Animal/Cow.cpp Animal/Real_Animal/Duck.cpp Animal/Real_Animal/Goat.cpp Animal/Real_Animal/Horse.cpp Animal/Real_Animal/Rabbit.cpp Animal/Real_Animal/ChickenDriver.cpp -o nama_file
+// g++ Position.cpp Animal.cpp Animal/EggProducingAnimal.cpp Animal/MeatProducingAnimal.cpp Animal/MilkProducingAnimal.cpp Animal/Real_Animal/Chicken.cpp Animal/Real_Animal/Cow.cpp Animal/Real_Animal/Duck.cpp Animal/Real_Animal/Goat.cpp Animal/Real_Animal/Horse.cpp Animal/Real_Animal/Rabbit.cpp Animal/Real_Animal/HorseDriver.cpp -o nama_file
 
-#include "Chicken.hpp"
+#include "Horse.hpp"
 #include <iostream>
 using namespace std;
 
 int main()
 {
   int pil = 0;
-  Chicken testAnimal(Position(1, 1));
+  Horse testAnimal(Position(1, 1));
 
-  cout << "Driver dari class Chicken" << endl;
-  cout << "Chicken yang dibuat berada di posisi (1, 1)" << endl;
+  cout << "Driver dari class Horses" << endl;
+  cout << "Horse yang dibuat berada di posisi (1, 1)" << endl;
   while (pil != -1) {
     cout << "Masukkan pilihan pengecekan" << endl;
     cout << "1. getLocation dari animal" << endl;

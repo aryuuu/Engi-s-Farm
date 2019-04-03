@@ -1,5 +1,6 @@
 #include "Animal.hpp"
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 /** ctor
@@ -76,7 +77,19 @@ bool Animal::isNear(Position p) const
 {
   int px = p.getAbsis();
   int py = p.getOrdinat();
-  return true;
+  int px2 = getLocation().getAbsis();
+  int py2 = getLocation().getOrdinat();
+  bool found = false;
+
+  if (px == px2 && abs(py - py2) == 1)
+  {
+    found = true;
+  }
+  else if(py == py2 && abs(px - px2) == 1)
+  {
+    found = true;
+  }
+  return found;
 }
 
 /** memberikan posisi random (atas, bawah, kiri, atau kanan) dari binatang tersebut */
@@ -84,6 +97,25 @@ Position Animal::randomMove()
 {
   int x = loc.getAbsis();
   int y = loc.getOrdinat();
+
+  int randInt = rand() % 4 + 1;
+  if (randInt == 1)
+  {
+    x--;
+  }
+  else if (randInt == 2)
+  {
+    x++;
+  }
+  else if (randInt == 3)
+  {
+    y--;
+  }
+  else if (randInt == 4)
+  {
+    y++;
+  }
+
   return (Position(x, y));
 }
 
@@ -101,10 +133,10 @@ bool Animal::canBeKilled() const
 /** mengembalikan hasil dari interact dengan animal, awalnya "" */
 std::string Animal::interactProduct()
 {
-  return "";
+  return "None";
 }
 /** mengembalikan hasil dari kill animal, awalnya "" */
 std::string Animal::killProduct()
 {
-  return "";
+  return "None";
 }
