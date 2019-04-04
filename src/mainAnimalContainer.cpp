@@ -105,7 +105,8 @@ int main()
       cout << "Masukkan y: ";
       cin >> y;
       Animal *target = animals.findOnPos(Position(x, y));
-      if (target = nullptr)
+      cout << "Tester" << endl;
+      if (target == nullptr)
       {
         cout << "No targets" << endl;
       }
@@ -121,7 +122,7 @@ int main()
       cout << "Masukkan y: ";
       cin >> y;
       Animal *target = animals.findNear(Position(x, y));
-      if (target = nullptr)
+      if (target == nullptr)
       {
         cout << "No targets" << endl;
       }
