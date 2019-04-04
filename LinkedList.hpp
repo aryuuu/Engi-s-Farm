@@ -82,6 +82,7 @@ void LinkedList<T>::remove(T element) {
 	}else {
 		prev->next=itr->next;
 	}
+	this->length--;
 	//free(*itr);
 }
 template <class T>

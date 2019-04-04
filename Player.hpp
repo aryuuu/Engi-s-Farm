@@ -7,7 +7,7 @@
   */
   
 #include "LinkedList.hpp"
-#include "./Product/Product.hpp"
+#include "Product.hpp"
 #include <iostream>
 #ifndef _PLAYER_HPP
 #define _PLAYER_HPP
@@ -28,13 +28,13 @@ class Player{
 		int getX() const; //mengambil atribut x (posisi Absis player)
 		int getY() const; //mengambil atribut y (posisi Ordinat player)
 		Product getBag(int idx) const; ////mengambil Product yang ada dalam LinkedList Bag pada indeks idx
+		int getSizeBag(); //Menghitung ukuran tas
 		//setter
 		void setWater(int water); //mengubah nilai atribut water
 		void setMoney(int money); //mengubah nilai atribut money
 		void setX(int x); //mengubah nilai atribut x (posisi Absis player)
 		void setY(int y);//mengubah nilai atribut y (posisi Ordinat player)
-		void setBag(int idx, Product prod); //mengubah nilai atribut LinkedList pada indeks idx
-		
+		void setBag(int idx, Product prod); //menghapus produk pada indeks i lalu menambahkan produk prod
 		void playerMove(char move); //Memindahkan posisi player ke atas / kanan / bawah / kiri dengan parameter input charr u/r/d/l dan posisi harus valid (harus divalidasi dulu)
 		void delProduct(string NamaProduct); //Menghapus product dari bag dengan parameter input NamaProduct
 		void delProductAll(); //Mengosongkan Bag

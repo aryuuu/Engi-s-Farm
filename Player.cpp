@@ -1,7 +1,7 @@
 #include <iostream>
 #define MAX 25
 #include "Player.hpp"
-#include "./Product/Product.cpp"
+#include "Product.cpp"
 using namespace std;
 Player::Player(){
 	setMoney(0);
@@ -30,6 +30,10 @@ Product Player::getBag(int idx) const ////mengambil Product yang ada dalam Linke
 {
 	return bag.get(idx);
 }
+int Player::getSizeBag() //Menghitung ukuran tas
+{
+	return bag.length;
+}	
 //setter
 void Player::setWater(int water) //mengubah nilai atribut water
 {
@@ -47,11 +51,11 @@ void Player::setY(int y)//mengubah nilai atribut y (posisi Ordinat player)
 {
 	this->y=y;
 }
-void Player::setBag(int idx, Product prod) //mengubah nilai atribut LinkedList pada indeks idx
+void Player::setBag(int idx, Product prod) //menghapus produk pada indeks i lalu menambahkan produk prod
 {
-	bag.get(idx).setNama(prod.getNama());
-	bag.get(idx).setHarga(prod.getHarga());
-}		
+	this->delProduct(bag.get(idx).getNama());
+	this->addProduct(prod);
+}	
 void Player::playerMove(char move) //Memindahkan posisi player ke atas / kanan / bawah / kiri dengan parameter input charr u/r/d/l dan posisi harus valid (harus divalidasi dulu)
 {
 	if(move=='l'){
