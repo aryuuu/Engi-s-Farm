@@ -1,16 +1,7 @@
-D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\AnimalContainer.cpp: In constructor 'AnimalContainer::AnimalContainer()':
-D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\AnimalContainer.cpp:9:40: error: no match for 'operator=' (operand types are 'LinkedList<Animal*>' and 'LinkedList<Animal*>*')
-   animalList = new LinkedList<Animal*>();
-                                        ^
-In file included from D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\AnimalContainer.hpp:10:0,
-                 from D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\AnimalContainer.cpp:1:
-D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\LinkedList.hpp:18:7: note: candidate: constexpr LinkedList<Animal*>& LinkedList<Animal*>::operator=(const LinkedList<Animal*>&)
- class LinkedList{
-       ^~~~~~~~~~
-D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\LinkedList.hpp:18:7: note:   no known conversion for argument 1 from 'LinkedList<Animal*>*' to 'const LinkedList<Animal*>&'
-D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\LinkedList.hpp:18:7: note: candidate: constexpr LinkedList<Animal*>& LinkedList<Animal*>::operator=(LinkedList<Animal*>&&)
-D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\LinkedList.hpp:18:7: note:   no known conversion for argument 1 from 'LinkedList<Animal*>*' to 'LinkedList<Animal*>&&'
-D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\AnimalContainer.cpp: At global scope:
-D:\ITB\Semester 4\Kelas Kuliah\Object Oriented Programming\Tugas Besar 1A\Engi-s-Farm\src\AnimalContainer.cpp:25:1: error: expected initializer before 'void'
- void AnimalContainer::setAnimal(Animal*, int)
- ^~~~
+C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x16d): undefined reference to `Animal::getLocation() const'
+C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x183): undefined reference to `Position::operator==(Position const&)'
+C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x235): undefined reference to `Animal::getLocation() const'
+C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x24b): undefined reference to `Position::operator==(Position const&)'
+C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x2e2): undefined reference to `Animal::isPosition(Position) const'
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(main.o):(.text.startup+0xa0): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status

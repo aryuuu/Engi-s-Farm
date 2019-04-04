@@ -17,40 +17,59 @@ template <class T>
   * Memiliki method untuk memanipulasi list; */
 class LinkedList{
 public:
+    // Atribut
     int length; // Panjang list
     Node<T> *head; // Alamat indeks awal List
 
+    // Getter-setter
+    int getLength();
+
+    // Method
     LinkedList<T>(); // ctor
-    //~LinkedList<T>(); // dtor -> menghapus semua linkedlist dan node-node di dalamnya
-    //LinkedList<T>& operator= (const LinkedList<T>&);// operator =
+    ~LinkedList<T>(); // dtor -> menghapus semua linkedlist dan node-node di dalamnya
+
     int find(T element) const; //Mengembalikan indeks dimana elemen ditemukan, -1 jika tidak ada
 	  bool isEmpty() const; //Mengembalikan True jika linked list kosong
 	  void add(T element); //Menambahkan elemen sebagai elemen paling akhir
 	  void remove(T element); //Membuang elemen dari linked list
-	  T get(int indeks) const; //Mengembalikan elemen pada indeks
+	  T getElmt(int indeks) const; //Mengembalikan elemen pada indeks
+    void setElmt(T data, int indeks);
 };
 
 
 template <class T>
 LinkedList<T>::LinkedList(){
     this->length = 0;
-    this->head = NULL;
+    this->head = nullptr;
+}
+
+
+template <class T>
+LinkedList<T>::~LinkedList() {
+  Node<T> *currTarget = head;
+  Node<T> *prevTarget;
+  for (int i = 0; i < (length - 1); i++)
+  {
+    prevTarget = currTarget;
+    currTarget = currTarget->getNext();
+    delete prevTarget;
+  }
 }
 
 template <class T>
 int LinkedList<T>::find(T element) const{
-	Node<T> itr = head;
+	Node<T> *itr = head;
 	bool found = false;
-	int posisi=1;
-	while(itr!=NULL && not(found)){
-		if (itr->data==element){
+	int posisi = 1;
+	while(itr != nullptr && not(found)){
+		if (itr->getData() == element){
 			found = true;
-		}else{
-			itr=itr->next;
+		} else {
+			itr = itr->getNext();
 			posisi++;
 		}
 	}
-	if (posisi>this->length){
+	if (posisi > this->length) {
 		posisi=-1;
 	}
 	return posisi;
@@ -63,47 +82,51 @@ bool LinkedList<T>::isEmpty() const{
 
 template <class T>
 void LinkedList<T>::add(T element){
-  Node<T> node = new Node<T>();
-  Node<T> itr = head;
-	node->data = element;
-	if (head!=NULL){
-  while (itr->next!=NULL){
-  	itr=itr->next;
+  Node<T> *node = new Node<T>(element);
+  Node<T> *itr = head;
+
+	if (head != nullptr){
+    while (itr->getNext() != nullptr){
+    	itr = itr->getNext();
+  	}
+    itr->setNext(node);
+	} else {
+		head = node;
 	}
-	itr->next = node;
-	}else{
-		head=node;
-	}
-    node->next = NULL;
-    this->length++;
+  this->length++;
 }
 
 template <class T>
 void LinkedList<T>::remove(T element) {
-	Node<T> itr = head;
-	Node<T> prev = NULL;
-	int pos=find(element);
-	while (--pos>0){
-		prev=itr;
-		itr=itr->next;
+	Node<T> *itr = head;
+	Node<T> *prev = nullptr;
+	int pos = find(element);
+
+	while (--pos > 0){
+		prev = itr;
+		itr = itr->getNext();
 	}
-	element=itr->data;
-	if (itr==this->head){
-		this->head=itr->next;
-		itr->next=NULL;
-	}else {
-		prev->next=itr->next;
+
+	element = itr->getData();
+	if (itr == this->head){
+		this->head = itr->getNext();
+    itr->setNext(nullptr);
+	} else {
+		prev->setNext(itr->getNext());
 	}
-	free(*itr);
+	delete itr;
+  this->length--;
 }
 
 template <class T>
-T LinkedList<T>::get(int indeks) const{
-	Node<T> itr = head;
-	while(--indeks){
-		itr=itr->next;
+T LinkedList<T>::getElmt(int indeks) const{
+  int counter = indeks;
+	Node<T> *itr = head;
+	while(counter > 1){
+		itr = itr->getNext();
+    counter--;
 	}
-	return itr->data;
+	return itr->getData();
 }
 
 #endif

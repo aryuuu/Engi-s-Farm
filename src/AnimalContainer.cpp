@@ -9,62 +9,174 @@ using namespace std;
 /** membentuk container animal dengan animal kosong*/
 AnimalContainer::AnimalContainer()
 {
-  animalList = new LinkedList<Animal*>();
-  NumAnimal = 0;
+  animalList = LinkedList<Animal*>();
 }
 
 // getter-setter
 /** mendapatkan salah satu animal pada urutan ke berapa*/
 Animal* AnimalContainer::getAnimal(int a)
 {
-  return animalList->head->data;
+  if (a <= getNumAnimal() && a > 0)
+  {
+    return animalList.getElmt(a);
+  }
+  else
+  {
+    return nullptr;
+  }
 }
+
 /** mengembalikan jumlah animal yang ada*/
 int AnimalContainer::getNumAnimal()
 {
-  return this->NumAnimal;
+  return this->animalList.length;
 }
+
 /** mengeset nilai Animal pada urutan ke-i*/
 void AnimalContainer::setAnimal(Animal* ani, int a)
 {
-  animalList->head->data = ani;
+  if (a <= getNumAnimal() && a > 0)
+  {
+    Animal* temp = getAnimal(a);
+    temp = ani;
+    delete temp;
+  }
+  else
+  {
+    cout << "Fail" << endl;
+  }
 }
 
 // fungsi-fungsi lain
+/** mengembalikan true jika tidak ada animal di position tersebut*/
+bool AnimalContainer::noAnimalOn(Position pos)
+{
+  bool notFound = true;
+  int i = 1;
+  while (notFound && i <= getNumAnimal())
+  {
+    Position temp = getAnimal(i)->getLocation();
+    if (temp == pos)
+    {
+      notFound = false;
+    } else {
+      i++;
+    }
+  }
+  return notFound;
+}
 /** menambahkan animal tertentu ke dalam animalList*/
 void AnimalContainer::addAnimal(Animal* ani)
 {
-  animalList->add(ani);
+  animalList.add(ani);
 }
 /** menghapus animal tertentu dari animalList*/
 void AnimalContainer::removeAnimal(Animal* ani)
 {
-  animalList->remove(ani);
+  animalList.remove(ani);
+}
+/** mengembalikan animal yang berada pada posisi tersebut*/
+Animal* AnimalContainer::findOnPos(Position pos)
+{
+  bool notFound = true;
+  int i = 1;
+  while (notFound && i <= getNumAnimal())
+  {
+    Position temp = getAnimal(i)->getLocation();
+    if (temp == pos)
+    {
+      notFound = false;
+    } else {
+      i++;
+    }
+  }
+  if (notFound) {
+    return nullptr;
+  } else {
+    return getAnimal(i);
+  }
 }
 /** mengembalikan animal pertama yang ditemukan yang memiliki posisi di atas, bawah, kiri, atau kanan */
 Animal* AnimalContainer::findNear(Position pos)
 {
-
-}
-
-/** mengembalikan true jika tidak ada animal di position tersebut*/
-bool AnimalContainer::noAnimalOn(Position pos)
-{
-  return true;
+  bool notFound = true;
+  int i = 1;
+  while (notFound && i <= getNumAnimal())
+  {
+    if (getAnimal(i)->isNear(pos))
+    {
+      notFound = false;
+    } else {
+      i++;
+    }
+  }
+  if (notFound) {
+    return nullptr;
+  } else {
+    int px = pos.getAbsis();
+    int py = pos.getOrdinat();
+    if (!noAnimalOn(Position((px - 1), py)))
+    {
+      return findOnPos(Position((px - 1), py));
+    }
+    else if (!noAnimalOn(Position((px + 1), py)))
+    {
+      return findOnPos(Position((px + 1), py));
+    }
+    else if (!noAnimalOn(Position(px, (py - 1))))
+    {
+      return findOnPos(Position(px, (py - 1)));
+    }
+    else if (!noAnimalOn(Position(px, (py + 1))))
+    {
+      return findOnPos(Position(px, (py + 1)));
+    }
+    else
+    {
+      return nullptr;
+    }
+  }
 }
 
 /** menggerakkan seluruh animal di dalam list ini dengan move tidak valid (divalidkan dengan Render)*/
-void AnimalContainer::allAnimalMove()
+void AnimalContainer::allAnimalMove(int brs, int kol)
 {
-
+  for (int i = 1; i <= getNumAnimal(); i++)
+  {
+    Position temp = getAnimal(i)->randomMove();
+    if (temp.getAbsis() > 0 && temp.getOrdinat() > 0 && temp.getAbsis() < brs && temp.getOrdinat() < kol)
+    {
+      if (noAnimalOn(temp))
+      {
+        getAnimal(i)->setLocation(temp);
+      }
+    }
+  }
 }
 /** menambahkan tingkat kelaparan setiap animal (notEatenC)*/
 void AnimalContainer::allAnimalHungrier()
 {
-
+  for (int i = 1; i <= getNumAnimal(); i++)
+  {
+    getAnimal(i)->hungrier();
+  }
 }
 /** membunuh setiap binatang yang layak mati*/
 void AnimalContainer::killDeads()
 {
-
+  for (int i = 1; i <= getNumAnimal(); i++)
+  {
+    if (getAnimal(i)->isDead())
+    {
+      removeAnimal(getAnimal(i));
+    }
+  }
+}
+/** print semua animal di list */
+void AnimalContainer::printAnimals()
+{
+  for (int i = 1; i <= getNumAnimal(); i++)
+  {
+    cout << "Animal [" << i << "]: " << getAnimal(i)->animalType() << "; (" << getAnimal(i)->getLocation().getAbsis() << "," << getAnimal(i)->getLocation().getOrdinat() << "); " << getAnimal(i)->getNotEatenC() << endl;
+  }
 }

@@ -115,7 +115,6 @@ Position Animal::randomMove()
   {
     y++;
   }
-
   return (Position(x, y));
 }
 

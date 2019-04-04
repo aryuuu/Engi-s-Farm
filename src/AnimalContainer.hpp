@@ -16,8 +16,7 @@
 class AnimalContainer
 {
 private:
-  LinkedList<Animal*>* animalList;     // menandakan animal-animal yang masih hidup di farm
-  int NumAnimal;                      // menandakan jumlah animal yang terdapat dalam farm
+  LinkedList<Animal*> animalList;     // menandakan animal-animal yang masih hidup di farm
 public:
   // ctor
   /** membentuk container animal dengan animal kosong*/
@@ -32,22 +31,26 @@ public:
   void setAnimal(Animal* ani, int a);
 
   // fungsi-fungsi lain
+  /** mengembalikan true jika tidak ada animal di position tersebut*/
+  bool noAnimalOn(Position);
   /** menambahkan animal tertentu ke dalam animalList*/
   void addAnimal(Animal*);
   /** menghapus animal tertentu dari animalList*/
   void removeAnimal(Animal*);
+  /** mengembalikan animal yang berada pada posisi tersebut*/
+  Animal* findOnPos(Position);
   /** mengembalikan animal pertama yang ditemukan yang memiliki posisi di atas, bawah, kiri, atau kanan */
   Animal* findNear(Position);
 
-  /** mengembalikan true jika tidak ada animal di position tersebut*/
-  bool noAnimalOn(Position);
 
   /** menggerakkan seluruh animal di dalam list ini dengan move tidak valid (divalidkan dengan Render)*/
-  void allAnimalMove();
+  void allAnimalMove(int, int);
   /** menambahkan tingkat kelaparan setiap animal (notEatenC)*/
   void allAnimalHungrier();
   /** membunuh setiap binatang yang layak mati*/
   void killDeads();
+  /** print semua animal di list */
+  void printAnimals();
 };
 
 #endif
