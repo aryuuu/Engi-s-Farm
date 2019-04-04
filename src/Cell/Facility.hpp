@@ -18,6 +18,9 @@ private:
     const std::string legend;
 public:
 
+    /** Constructor */
+    Facility(int x,int y, std::string legend);
+
     //Getter
     std::string getLegend();
 
