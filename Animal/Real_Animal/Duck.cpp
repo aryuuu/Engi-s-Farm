@@ -34,3 +34,15 @@ std::string Duck::interactProduct()
 {
   return "DuckEgg";
 }
+/** menuliskan lambang dari animal tersebut ke dalam tile */
+void Duck::printTile()
+{
+  if (getHasEaten())
+  {
+    cout << "D";
+  }
+  else
+  {
+    cout << "d";
+  }
+}

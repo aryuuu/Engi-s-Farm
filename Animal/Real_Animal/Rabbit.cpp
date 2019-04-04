@@ -34,3 +34,15 @@ std::string Rabbit::killProduct()
 {
   return "RabbitMeat";
 }
+/** menuliskan lambang dari animal tersebut ke dalam tile */
+void Rabbit::printTile()
+{
+  if (getHasEaten())
+  {
+    cout << "R";
+  }
+  else
+  {
+    cout << "r";
+  }
+}

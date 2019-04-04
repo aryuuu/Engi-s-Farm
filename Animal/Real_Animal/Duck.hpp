@@ -33,6 +33,8 @@ public:
   std::string sound() const;
   /** menentukan produk interaksi*/
   std::string interactProduct();
+  /** menuliskan lambang dari animal tersebut ke dalam tile */
+  void printTile();
 };
 
 #endif

@@ -34,3 +34,15 @@ std::string Horse::interactProduct()
 {
   return "HorseMilk";
 }
+/** menuliskan lambang dari animal tersebut ke dalam tile */
+void Horse::printTile()
+{
+  if (getHasEaten())
+  {
+    cout << "H";
+  }
+  else
+  {
+    cout << "a";
+  }
+}

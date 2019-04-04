@@ -31,6 +31,8 @@ public:
   std::string animalType() const;
   /** menentukan suara dari animal ini */
   std::string sound() const;
+  /** menuliskan lambang dari animal tersebut ke dalam tile */
+  void printTile();
 };
 
 #endif

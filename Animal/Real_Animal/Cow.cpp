@@ -39,3 +39,15 @@ std::string Cow::killProduct()
 {
   return "ChckenMeat";
 }
+/** menuliskan lambang dari animal tersebut ke dalam tile */
+void Cow::printTile()
+{
+  if (getHasEaten())
+  {
+    cout << "C";
+  }
+  else
+  {
+    cout << "c";
+  }
+}

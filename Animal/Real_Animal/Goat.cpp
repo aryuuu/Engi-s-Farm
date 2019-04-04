@@ -29,3 +29,15 @@ std::string Goat::sound() const
 {
   return "Mbeeeek";
 }
+/** menuliskan lambang dari animal tersebut ke dalam tile */
+void Goat::printTile()
+{
+  if (getHasEaten())
+  {
+    cout << "G";
+  }
+  else
+  {
+    cout << "g";
+  }
+}

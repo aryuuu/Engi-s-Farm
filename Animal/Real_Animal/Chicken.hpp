@@ -40,6 +40,8 @@ public:
   std::string interactProduct();
   /** menentukan produk hasil kill */
   std::string killProduct();
+  /** menuliskan lambang dari animal tersebut ke dalam tile */
+  void printTile();
 };
 
 #endif

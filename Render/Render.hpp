@@ -12,7 +12,7 @@
 #include "./Facility/Truck.hpp"
 #include "./Facility/Well.hpp"
 #include "../Player.hpp"
-#include "../Animal/AnimalContainer.hpp"
+#include "AnimalContainer.hpp"
 
 #ifndef _RENDER_HPP
 #define _RENDER_HPP
@@ -31,7 +31,7 @@ public:
 
     /** Destructor */
     ~Render();
- 
+
     /** Getter */
     int getMaxX();
     int getMaxY();

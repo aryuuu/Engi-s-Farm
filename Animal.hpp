@@ -70,6 +70,8 @@ public:
   virtual std::string animalType() const = 0;
   /** mengembalikan suara dari binatang yang dimakasud */
   virtual std::string sound() const = 0;
+  /** menuliskan lambang dari animal tersebut ke dalam tile */
+  virtual void printTile() = 0;
 
   /** mengembalikan hasil dari interact dengan animal, awalnya "" */
   virtual std::string interactProduct();
