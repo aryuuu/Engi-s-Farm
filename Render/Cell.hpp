@@ -17,13 +17,16 @@ private:
     int x,y; // Position of the cell
 public:
 
+    /** Constructor */
+    Cell(int x,int y);
+
     /** Getter */
     int getPosX();
     int getPosY();
 
     /** Setter */
-    void setPosX();
-    void setPosY();
+    void setPosX(int x);
+    void setPosY(int y);
 
     /** Abstract Function */
     virtual void print() = 0;

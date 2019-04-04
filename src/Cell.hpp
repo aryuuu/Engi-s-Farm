@@ -13,7 +13,7 @@
 
 class Cell
 {
-private:
+protected:
     int x,y; // Position of the cell
 public:
 
