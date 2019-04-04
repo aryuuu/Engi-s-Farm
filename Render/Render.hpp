@@ -6,7 +6,11 @@
   * @date 2019-03-18
   */
 
+#include "Land.hpp"
 #include "Cell.hpp"
+#include "./Facility/Mixer.hpp"
+#include "./Facility/Truck.hpp"
+#include "./Facility/Well.hpp"
 #include "../Player.hpp"
 #include "../Animal/AnimalContainer.hpp"
 
@@ -16,46 +20,27 @@
 class Render
 {
 private:
-    Cell *** farm; // Tempat Menyimpan Map dari Farm (Cell Harus Dibuat Pointer)
+    Cell::Cell *** farm; // Tempat Menyimpan Map dari Farm (Cell Harus Dibuat Pointer)
     // Penanda Max Element
     int maxX;
     int maxY;
-    Player P;
-    AnimalContainer AC;
-public:
-    //Ctor
-    Render(int maxX,int maxY,Player P,AnimalContainer AC);
 
-    //Dtor
+public:
+    /** Constructor */
+    Render(int maxX,int maxY);
+
+    /** Destructor */
     ~Render();
  
     /** Getter */
     int getMaxX();
     int getMaxY();
-    std::string getLegendCell(int x,int y);
+    Cell::Cell* getLegendCell(int x,int y);
 
-    /** Setter */
-    void setMaxX(int x);
-    void setMaxY(int y);
-    void setLegendCell(std::string Legend,int x,int y);
 
     /** Print Map Ke Layar*/
     void print();
 
-    /** Cek apakah player valid untuk move lalu move player*/
-    void movePlayer();
-
-    /** Membunuh Animal*/
-    void playerKill();
-
-    /** Untuk interaksi dengan animal*/
-    void playerInteract();
-
-    /** Untuk cek animal valid untuk move lalu move animal*/
-    void moveAnimal();
-
-    /** Fungsi agar animal yang berada pada grass maka akan dimakan*/
-    void allAnimalEatGrass();
 };
 
 #endif

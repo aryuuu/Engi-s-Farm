@@ -15,14 +15,16 @@ class Cell
 {
 protected:
     int x,y; // Position of the cell
+    const std::string legend;
 public:
 
     /** Constructor */
-    Cell(int x,int y);
+    Cell(int x,int y,std::string legend);
 
     /** Getter */
     int getPosX();
     int getPosY();
+    std::string getLegend();
 
     /** Setter */
     void setPosX(int x);

@@ -3,7 +3,7 @@
 using namespace std;
 
 /** Constructor */
-Cell::Cell(int x, int y)
+Cell::Cell(int x, int y,std::string legend):legend(legend)
 {
     this->x = x;
     this->y = y;
@@ -18,6 +18,11 @@ int Cell::getPosX()
 int Cell::getPosY()
 {
     return this->y;
+}
+
+std::string Cell::getLegend()
+{
+    return this->legend;
 }
 
 /** Setter */

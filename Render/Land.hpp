@@ -25,7 +25,7 @@ class Land : public Cell
 
     /** Getter */
     bool getIsGrass();
-
+    
     /** Fungsi Print Isi dari Land */
     void print();
 

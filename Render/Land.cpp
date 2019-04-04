@@ -4,7 +4,7 @@
 using namespace std;
 
 //Ctor
-Land::Land(bool isGrass, int x, int y):Cell(x,y),legend("land")
+Land::Land(bool isGrass, int x, int y) : Cell(x, y,"land")
 {
     this->isGrass = isGrass;
 }
@@ -23,13 +23,18 @@ bool Land::getIsGrass()
     return this->isGrass;
 }
 
+
+
 /** Fungsi Print Isi dari Land */
 void Land::print()
 {
-    if (this->isGrass){
-        cout<<"^";
-    }else{
-        cout<<" ";
+    if (this->isGrass)
+    {
+        cout << "^";
+    }
+    else
+    {
+        cout << " ";
     }
 }
 
