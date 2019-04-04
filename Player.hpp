@@ -22,17 +22,18 @@ class Player{
 		LinkedList<Product> bag; // List yang menyimpan produk yang dihasilkan dari hewan
 	public:
 		//getter
+		Player();
 		int getWater() const; //mengambil atribut water
 		int getMoney() const; //mengambil atribut money
 		int getX() const; //mengambil atribut x (posisi Absis player)
 		int getY() const; //mengambil atribut y (posisi Ordinat player)
 		Product getBag(int idx) const; ////mengambil Product yang ada dalam LinkedList Bag pada indeks idx
 		//setter
-		void setWater(); //mengubah nilai atribut water
-		void setMoney(); //mengubah nilai atribut money
-		void setX(); //mengubah nilai atribut x (posisi Absis player)
-		void setY();//mengubah nilai atribut y (posisi Ordinat player)
-		void setBag(int idx); //mengubah nilai atribut LinkedList pada indeks idx
+		void setWater(int water); //mengubah nilai atribut water
+		void setMoney(int money); //mengubah nilai atribut money
+		void setX(int x); //mengubah nilai atribut x (posisi Absis player)
+		void setY(int y);//mengubah nilai atribut y (posisi Ordinat player)
+		void setBag(int idx, Product prod); //mengubah nilai atribut LinkedList pada indeks idx
 		
 		void playerMove(char move); //Memindahkan posisi player ke atas / kanan / bawah / kiri dengan parameter input charr u/r/d/l dan posisi harus valid (harus divalidasi dulu)
 		void delProduct(string NamaProduct); //Menghapus product dari bag dengan parameter input NamaProduct

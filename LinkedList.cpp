@@ -1,22 +1,20 @@
-/**
-  * @file LinkedList.hpp
-  * @author SubscribeToPewDiePie
-  * @brief File berisi method dan atribut dari class LinkedList
-  * @version 1
-  * @date 2019-03-19
-  */
 #include <iostream>
-#include "Node.hpp"
+#include <cstdlib>
+using namespace std;
+template <class T>
+class Node{
+public:
+    Node* next;
+    T data;
+};
 
 template <class T>
-/** Class LinkedList mendefinisikan tipe LinkedList;
-  * Memiliki atribut length yaitu panjang list dan head yang merupakan alamat indeks awal list; 
-  * Memiliki method untuk memanipulasi list; */	
 class LinkedList{
 public:
-    int length; // Panjang list
-    Node<T>* head; // Alamat indeks awal List
-    LinkedList(); // ctor
+    int length;
+    Node<T>* head;
+
+    LinkedList();
     int find(T element) const; //Mengembalikan indeks dimana elemen ditemukan, -1 jika tidak ada
 	bool isEmpty() const; //Mengembalikan True jika linked list kosong
 	void add(T element); //Menambahkan elemen sebagai elemen paling akhir
@@ -69,20 +67,16 @@ void LinkedList<T>::add(T element){
 template <class T>
 void LinkedList<T>::remove(T element) {
 	Node<T>* itr = head;
-	Node<T>* prev = NULL;
 	int pos=find(element);
 	while (--pos>0){
-		prev=itr;
 		itr=itr->next;
 	}
-	element=itr->data;
 	if (itr==this->head){
 		this->head=itr->next;
 		itr->next=NULL;
-	}else {
-		prev->next=itr->next;
+	}else{
+		
 	}
-	//free(*itr);
 }
 template <class T>
 T LinkedList<T>::get(int indeks) const{
