@@ -4,17 +4,12 @@
 using namespace std;
 
 //Ctor
-Land::Land(string legend, string category, bool isGrass, int x, int y):Cell(x,y),legend(legend)
+Land::Land(bool isGrass, int x, int y):Cell(x,y),legend("land")
 {
-    this->category = category;
     this->isGrass = isGrass;
 }
 
 /** Setter */
-void Land::setCategory(std::string category)
-{
-    this->category = category;
-}
 
 void Land::setIsGrass(bool isGrass)
 {
@@ -22,10 +17,6 @@ void Land::setIsGrass(bool isGrass)
 }
 
 /** Getter */
-string Land::getCategory()
-{
-    return this->category;
-}
 
 bool Land::getIsGrass()
 {
@@ -33,11 +24,9 @@ bool Land::getIsGrass()
 }
 
 /** Fungsi Print Isi dari Land */
-void Land::print(AnimalContainer AC, Player P)
+void Land::print()
 {
-    if(P.getX() == this->x && P.getY() == this->y){
-        cout<<"P";
-    }else if (this->isGrass){
+    if (this->isGrass){
         cout<<"^";
     }else{
         cout<<" ";
