@@ -6,17 +6,19 @@
   * @date 2019-03-18
   */
 
-#include "Animal.hpp"
+#include "../Animal.hpp"
 
 #ifndef _MEAT_PRODUCING_ANIMAL_HPP
 #define _MEAT_PRODUCING_ANIMAL_HPP
 
 /** Class berisi setiap animal yang dapat menghasilkan daging */
-class MeatProducingAnimal: public Animal
+class MeatProducingAnimal: virtual public Animal
 {
 private:
   // tidak ada atribut
 public:
+  /** Konstruktor */
+  MeatProducingAnimal (Position p);
   /** mengeset canBeKilled menjadi true */
   bool canBeKilled() const;
 };

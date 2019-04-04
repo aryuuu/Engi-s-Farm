@@ -1,7 +1,0 @@
-C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x16d): undefined reference to `Animal::getLocation() const'
-C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x183): undefined reference to `Position::operator==(Position const&)'
-C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x235): undefined reference to `Animal::getLocation() const'
-C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x24b): undefined reference to `Position::operator==(Position const&)'
-C:\Users\Meyjan\AppData\Local\Temp\ccmB7Ss6.o:AnimalContainer.cpp:(.text+0x2e2): undefined reference to `Animal::isPosition(Position) const'
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(main.o):(.text.startup+0xa0): undefined reference to `WinMain@16'
-collect2.exe: error: ld returned 1 exit status

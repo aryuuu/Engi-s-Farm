@@ -6,17 +6,19 @@
   * @date 2019-03-18
   */
 
-#include "Animal.hpp"
+#include "../Animal.hpp"
 
 #ifndef _MILK_PRODUCING_ANIMAL_HPP
 #define _MILK_PRODUCING_ANIMAL_HPP
 
 /** Class berisi setiap animal yang dapat menghasilkan susu */
-class MilkProducingAnimal: public Animal
+class MilkProducingAnimal: virtual public Animal
 {
 private:
   // tidak ada atribut
 public:
+  /** Konstruktor */
+  MilkProducingAnimal (Position p);
   /** mengeset canBeInteracted menjadi true */
   bool canBeInteracted() const;
 };
