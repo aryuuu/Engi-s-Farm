@@ -14,18 +14,20 @@
 class Land : public Cell
 {
   private:
-    const std::string legend ;
+    std::string kategori;
     bool isGrass;
   public:
     //Ctor
-    Land(bool isGrass,int x,int y);
+    Land(bool isGrass,int x,int y, std::string _kategori);
 
     /** Setter */
     void setIsGrass(bool isGrass);
+    void setKategori(std::string kategori);
 
     /** Getter */
     bool getIsGrass();
-    
+    std::string getKategori();
+
     /** Fungsi Print Isi dari Land */
     void print();
 
