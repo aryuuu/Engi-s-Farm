@@ -28,8 +28,6 @@ public:
     void setPosX(int x);
     void setPosY(int y);
 
-    /** Abstract Function */
-    virtual void print() = 0;
 };
 
 #endif

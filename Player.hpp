@@ -7,7 +7,7 @@
   */
   
 #include "LinkedList.hpp"
-#include "Product.hpp"
+#include "./Product/Product.hpp"
 #include <iostream>
 #ifndef _PLAYER_HPP
 #define _PLAYER_HPP

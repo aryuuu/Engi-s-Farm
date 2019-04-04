@@ -1,7 +1,7 @@
 #include <iostream>
 #define MAX 25
 #include "Player.hpp"
-#include "Product.cpp"
+#include "./Product/Product.cpp"
 using namespace std;
 Player::Player(){
 	setMoney(0);
