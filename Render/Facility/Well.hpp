@@ -22,8 +22,6 @@ public:
     /**Print Well Pada Layar*/
     void print();
 
-    /**Menambah Air Pada Player*/
-    void action(Player& P);
 };
 
 #endif

@@ -22,8 +22,7 @@ public:
     /**Print Well Pada Layar*/
     void print();
 
-    /**Menggabunggkan Farm Product Menjadi Side Product*/
-    void action(Player& P);
+
 };
 
 #endif

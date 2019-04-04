@@ -24,7 +24,6 @@ public:
 
     //Abstract Function
     virtual void print() = 0;
-    virtual void action() = 0;
 };
 
 #endif

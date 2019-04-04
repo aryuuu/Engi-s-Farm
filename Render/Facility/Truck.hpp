@@ -21,9 +21,6 @@ public:
 
     /**Print Well Pada Layar*/
     void print();
-
-    /**Tempat Player Menjual Inventory*/
-    void action(Player& P);
 };
 
 #endif
