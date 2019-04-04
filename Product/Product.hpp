@@ -22,7 +22,7 @@ class Product{
 	public :
 
 		//cotr
-		Product::Product();
+		Product();
 		/**
 		*getter 
 		**/
@@ -49,7 +49,7 @@ class Product{
 		
 
 		//mengembalikan 1 jika nama produk sama 
-		int sama(Product);
+		bool operator==(const Product&);
 };
 
 

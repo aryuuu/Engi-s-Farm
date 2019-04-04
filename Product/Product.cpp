@@ -4,11 +4,17 @@ using namespace std;
 
 //ctor buat bikin list
 Product::Product(){
-	this.setNama("-");
-	this.getHarga(-1);
+	this->setNama("-");
+	this->setHarga(-1);
 }
 
-
+bool Product::operator==(const Product& P){
+	if(this->getNama() == P.getNama()){
+		return 1;
+	} else {
+		return 0;
+	}
+}
 /**
 *mengembalikan nama dari produk
 **/
