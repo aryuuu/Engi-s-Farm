@@ -16,7 +16,7 @@
 class AnimalContainer
 {
 private:
-  LinkedList<Animal*> animalList;     // menandakan animal-animal yang masih hidup di farm
+  LinkedList2<Animal*> animalList;     // menandakan animal-animal yang masih hidup di farm
 public:
   // ctor
   /** membentuk container animal dengan animal kosong*/

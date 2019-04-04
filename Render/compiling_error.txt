@@ -1,0 +1,3 @@
+C:\Users\Meyjan\AppData\Local\Temp\ccz0gsno.o:Render.cpp:(.text+0xc5): undefined reference to `Land::Land(bool, int, int)'
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(main.o):(.text.startup+0xa0): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status

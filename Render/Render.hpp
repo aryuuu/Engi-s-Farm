@@ -12,7 +12,7 @@
 #include "./Facility/Truck.hpp"
 #include "./Facility/Well.hpp"
 #include "../Player.hpp"
-#include "AnimalContainer.hpp"
+#include "../AnimalContainer.hpp"
 
 #ifndef _RENDER_HPP
 #define _RENDER_HPP
@@ -20,7 +20,7 @@
 class Render
 {
 private:
-    Cell::Cell *** farm; // Tempat Menyimpan Map dari Farm (Cell Harus Dibuat Pointer)
+    Cell *** farm; // Tempat Menyimpan Map dari Farm (Cell Harus Dibuat Pointer)
     // Penanda Max Element
     int maxX;
     int maxY;
@@ -28,6 +28,8 @@ private:
 public:
     /** Constructor */
     Render(int maxX,int maxY);
+    /** Constructor: From file */
+    Render(std::string filename);
 
     /** Destructor */
     ~Render();
@@ -35,7 +37,7 @@ public:
     /** Getter */
     int getMaxX();
     int getMaxY();
-    Cell::Cell* getLegendCell(int x,int y);
+    Cell* getLegendCell(int x,int y);
 
 
     /** Print Map Ke Layar*/

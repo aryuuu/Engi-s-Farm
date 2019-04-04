@@ -1,5 +1,7 @@
 #include "Render.hpp"
 #include <iostream>
+#include <fstream>
+#include <string>
 
 /** Constructor */
 Render::Render(int maxX, int maxY)
@@ -16,9 +18,44 @@ Render::Render(int maxX, int maxY)
     {
         for (int j = 0; i < maxY; i++)
         {
-            this->farm[i][j] = new Land::Land(true, i, j);
+            this->farm[i][j] = new Land(true, i, j);
         }
     }
+}
+
+/** Constructor: From file */
+Render::Render(std::string filename)
+{
+    int count = 0;
+    std::ifstream file(filename);
+    std::string str;
+    count++;
+    std::getline(file, str);
+    this->maxY = str.length();
+    while (std::getline(file, str))
+    {
+      count++;
+    }
+    this->maxX = count;
+
+    this->farm = new Cell **[maxX];
+    for (int i = 0; i < maxY; i++)
+    {
+        this->farm[i] = new Cell *[maxY];
+    }
+
+    std::ifstream file2(filename);
+    int i = 0;
+    while (std::getline(file, str))
+    {
+      for (int j = 0; j < (this->maxY); j++)
+      {
+        // Atur kalau baca land (coop / barn / grassland) atau facility (well / mixer / truck)
+      }
+      i++;
+    }
+
+
 }
 
 /** Destructor */
@@ -42,7 +79,7 @@ int Render::getMaxY()
     return this->maxY;
 }
 
-Cell::Cell* Render::getLegendCell(int x, int y)
+Cell* Render::getLegendCell(int x, int y)
 {
     return this->farm[x][y];
 }
@@ -57,4 +94,3 @@ void Render::print()
         std::cout<<std::endl;
     }
 }
-

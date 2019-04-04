@@ -1,32 +1,32 @@
 /**
-  * @file LinkedList.hpp
+  * @file LinkedList2.hpp
   * @author SubscribeToPewDiePie
-  * @brief File berisi method dan atribut dari class LinkedList
+  * @brief File berisi method dan atribut dari class LinkedList2
   * @version 1
   * @date 2019-03-19
   */
 #include <iostream>
 #include "Node2.hpp"
 
-#ifndef _LINKED_LIST
-#define _LINKED_LIST
+#ifndef _LINKED_LIST2_HPP
+#define _LINKED_LIST2_HPP
 
 template <class T>
-/** Class LinkedList mendefinisikan tipe LinkedList;
+/** Class LinkedList2 mendefinisikan tipe LinkedList2;
   * Memiliki atribut length yaitu panjang list dan head yang merupakan alamat indeks awal list;
   * Memiliki method untuk memanipulasi list; */
-class LinkedList{
+class LinkedList2{
 public:
     // Atribut
     int length; // Panjang list
-    Node<T> *head; // Alamat indeks awal List
+    Node2<T> *head; // Alamat indeks awal List
 
     // Getter-setter
     int getLength();
 
     // Method
-    LinkedList<T>(); // ctor
-    ~LinkedList<T>(); // dtor -> menghapus semua linkedlist dan node-node di dalamnya
+    LinkedList2<T>(); // ctor
+    ~LinkedList2<T>(); // dtor -> menghapus semua LinkedList2 dan Node2-Node2 di dalamnya
 
     int find(T element) const; //Mengembalikan indeks dimana elemen ditemukan, -1 jika tidak ada
 	  bool isEmpty() const; //Mengembalikan True jika linked list kosong
@@ -38,16 +38,16 @@ public:
 
 
 template <class T>
-LinkedList<T>::LinkedList(){
+LinkedList2<T>::LinkedList2(){
     this->length = 0;
     this->head = nullptr;
 }
 
 
 template <class T>
-LinkedList<T>::~LinkedList() {
-  Node<T> *currTarget = head;
-  Node<T> *prevTarget;
+LinkedList2<T>::~LinkedList2() {
+  Node2<T> *currTarget = head;
+  Node2<T> *prevTarget;
   for (int i = 0; i < (length - 1); i++)
   {
     prevTarget = currTarget;
@@ -57,8 +57,8 @@ LinkedList<T>::~LinkedList() {
 }
 
 template <class T>
-int LinkedList<T>::find(T element) const{
-	Node<T> *itr = head;
+int LinkedList2<T>::find(T element) const{
+	Node2<T> *itr = head;
 	bool found = false;
 	int posisi = 1;
 	while(itr != nullptr && not(found)){
@@ -76,14 +76,14 @@ int LinkedList<T>::find(T element) const{
 }
 
 template <class T>
-bool LinkedList<T>::isEmpty() const{
+bool LinkedList2<T>::isEmpty() const{
 	return (length==0);
 }
 
 template <class T>
-void LinkedList<T>::add(T element){
-  Node<T> *node = new Node<T>(element);
-  Node<T> *itr = head;
+void LinkedList2<T>::add(T element){
+  Node2<T> *node = new Node2<T>(element);
+  Node2<T> *itr = head;
 
 	if (head != nullptr){
     while (itr->getNext() != nullptr){
@@ -97,9 +97,9 @@ void LinkedList<T>::add(T element){
 }
 
 template <class T>
-void LinkedList<T>::remove(T element) {
-	Node<T> *itr = head;
-	Node<T> *prev = nullptr;
+void LinkedList2<T>::remove(T element) {
+	Node2<T> *itr = head;
+	Node2<T> *prev = nullptr;
 	int pos = find(element);
 
 	while (--pos > 0){
@@ -119,9 +119,9 @@ void LinkedList<T>::remove(T element) {
 }
 
 template <class T>
-T LinkedList<T>::getElmt(int indeks) const{
+T LinkedList2<T>::getElmt(int indeks) const{
   int counter = indeks;
-	Node<T> *itr = head;
+	Node2<T> *itr = head;
 	while(counter > 1){
 		itr = itr->getNext();
     counter--;

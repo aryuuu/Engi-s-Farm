@@ -9,7 +9,7 @@ using namespace std;
 /** membentuk container animal dengan animal kosong*/
 AnimalContainer::AnimalContainer()
 {
-  animalList = LinkedList<Animal*>();
+  animalList = LinkedList2<Animal*>();
 }
 
 // getter-setter

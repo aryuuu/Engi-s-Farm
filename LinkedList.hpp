@@ -8,10 +8,13 @@
 #include <iostream>
 #include "Node.hpp"
 
+#ifndef _LINKED_LIST
+#define _LINKED_LIST
+
 template <class T>
 /** Class LinkedList mendefinisikan tipe LinkedList;
-  * Memiliki atribut length yaitu panjang list dan head yang merupakan alamat indeks awal list; 
-  * Memiliki method untuk memanipulasi list; */	
+  * Memiliki atribut length yaitu panjang list dan head yang merupakan alamat indeks awal list;
+  * Memiliki method untuk memanipulasi list; */
 class LinkedList{
 public:
     int length; // Panjang list
@@ -93,3 +96,5 @@ T LinkedList<T>::get(int indeks) const{
 	}
 	return itr->data;
 }
+
+#endif

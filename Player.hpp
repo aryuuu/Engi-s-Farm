@@ -5,15 +5,15 @@
   * @version 1
   * @date 2019-03-19
   */
-  
+
 #include "LinkedList.hpp"
-#include "Product.hpp"
+#include "Product/Product.hpp"
 #include <iostream>
 #ifndef _PLAYER_HPP
 #define _PLAYER_HPP
 /** Class Player mendefinisikan tipe pemain;
   * Memiliki tas,posisi x dan y, uang , dan air;
-  * Method beruhungan dengan pergerakan pemain dan perintah seperti talk, interact, dan kill; */	
+  * Method beruhungan dengan pergerakan pemain dan perintah seperti talk, interact, dan kill; */
 class Player{
 	private:
 		int water; // Jumlah kapasitas gembor (Alat penyiraman) yang tersisa untuk menyiram rumput
@@ -40,7 +40,7 @@ class Player{
 		void delProductAll(); //Mengosongkan Bag
 		void reduceWater(); //Mengkurangi atribut water yang ada didalam gebor (Alat penyiraman)
 		void addProduct(Product Prod); //Menambahkan Product Prod ke Bag dan ditaruh di paling belakang
-		void addWater(); //Mengisi gebor dengan air secara maksimal (sesuai kapasitas) dengan mengubah atribut water 
+		void addWater(); //Mengisi gebor dengan air secara maksimal (sesuai kapasitas) dengan mengubah atribut water
 		void addMoney(int harga); //Menambah atribut money sesuai dengan harga
 };
 #endif
