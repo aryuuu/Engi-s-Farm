@@ -49,6 +49,8 @@ public:
   void allAnimalMove(Position, Render);
   /** menambahkan tingkat kelaparan setiap animal (notEatenC)*/
   void allAnimalHungrier();
+  /** membuat setiap animal yang berada di atas rumput dan masih lapar makan */
+  void allAnimalEatGrass(Render);
   /** membunuh setiap binatang yang layak mati*/
   void killDeads();
   /** print semua animal di list */

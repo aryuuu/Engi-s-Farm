@@ -178,6 +178,22 @@ void AnimalContainer::allAnimalHungrier()
     getAnimal(i)->hungrier();
   }
 }
+/** membuat setiap animal yang berada di atas rumput dan masih lapar makan */
+void AnimalContainer::allAnimalEatGrass(Render map)
+{
+  for (int i = 1;n i <= getNumAnimal(); i++)
+  {
+    if (getAnimal(i)->hasEaten() == false)
+    {
+      Position pos = getAnimal(i)->getLocation();
+      if (map.getLegendCell(pos.getAbsis(), pos.getOrdinat())->isGrass() == true)
+      {
+        map.getLegendCell(pos.getAbsis(), pos.getOrdinat())->eatGrass();
+        getAnimal(i)->animalHasEaten();
+      }
+    }
+  }
+}
 /** membunuh setiap binatang yang layak mati*/
 void AnimalContainer::killDeads()
 {
