@@ -170,7 +170,8 @@ bool Render::isValidPos(int x,int y)
 {
   return(this->farm[x][y]->getLegend() == "truck" && 
           this->farm[x][y]->getLegend() == "mixer" &&
-          this->farm[x][y]->getLegend() == "well");
+          this->farm[x][y]->getLegend() == "well" &&
+          x >= 0 && x < this->maxX && y >= 0 && y < this->maxY);
 
 }
 
