@@ -154,17 +154,17 @@ Cell* Render::getLegendCell(int x, int y)
 
 /** Print Map Ke Layar*/
 // Nanti tambah AnimalContainer dan Player ke dalam ini
-void Render::printAll()
-{
-  // cout << "Called" << endl;
-    for(int i = 0;i < this->maxX;i++){
-      // cout << "Test i" << endl;
-        for(int j = 0;j < this->maxY;j++){
-            farm[i][j] -> print();
-        }
-        std::cout<<std::endl;
-    }
-}
+// void Render::printAll()
+// {
+//   // cout << "Called" << endl;
+//     for(int i = 0;i < this->maxX;i++){
+//       // cout << "Test i" << endl;
+//         for(int j = 0;j < this->maxY;j++){
+//             farm[i][j] -> print();
+//         }
+//         std::cout<<std::endl;
+//     }
+// }
 
 bool Render::isValidPos(int x,int y)
 {
