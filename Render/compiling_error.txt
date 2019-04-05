@@ -1,3 +1,11 @@
-C:\Users\Meyjan\AppData\Local\Temp\ccz0gsno.o:Render.cpp:(.text+0xc5): undefined reference to `Land::Land(bool, int, int)'
+C:\Users\Meyjan\AppData\Local\Temp\cc91QpFg.o:Render.cpp:(.text+0xf9): undefined reference to `Land::Land(bool, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+C:\Users\Meyjan\AppData\Local\Temp\cc91QpFg.o:Render.cpp:(.text+0x3a7): undefined reference to `Land::Land(bool, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+C:\Users\Meyjan\AppData\Local\Temp\cc91QpFg.o:Render.cpp:(.text+0x46d): undefined reference to `Land::Land(bool, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+C:\Users\Meyjan\AppData\Local\Temp\cc91QpFg.o:Render.cpp:(.text+0x52d): undefined reference to `Land::Land(bool, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+C:\Users\Meyjan\AppData\Local\Temp\cc91QpFg.o:Render.cpp:(.text+0x5e4): undefined reference to `Land::Land(bool, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+C:\Users\Meyjan\AppData\Local\Temp\cc91QpFg.o:Render.cpp:(.text+0x698): more undefined references to `Land::Land(bool, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)' follow
+C:\Users\Meyjan\AppData\Local\Temp\cc91QpFg.o:Render.cpp:(.text+0x7c8): undefined reference to `Mixer::Mixer(int, int)'
+C:\Users\Meyjan\AppData\Local\Temp\cc91QpFg.o:Render.cpp:(.text+0x830): undefined reference to `Truck::Truck(int, int)'
+C:\Users\Meyjan\AppData\Local\Temp\cc91QpFg.o:Render.cpp:(.text+0x895): undefined reference to `Well::Well(int, int)'
 c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(main.o):(.text.startup+0xa0): undefined reference to `WinMain@16'
 collect2.exe: error: ld returned 1 exit status

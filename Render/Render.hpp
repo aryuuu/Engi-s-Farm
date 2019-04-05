@@ -13,6 +13,7 @@
 #include "./Facility/Well.hpp"
 #include "../Player.hpp"
 #include "../AnimalContainer.hpp"
+#include <string>
 
 #ifndef _RENDER_HPP
 #define _RENDER_HPP
@@ -29,7 +30,7 @@ public:
     /** Constructor */
     Render(int maxX,int maxY);
     /** Constructor: From file */
-    Render(std::string filename);
+    Render(string filename);
 
     /** Destructor */
     ~Render();
@@ -41,7 +42,8 @@ public:
 
 
     /** Print Map Ke Layar*/
-    void print();
+    // Nanti tambah AnimalContainer dan Player ke dalam ini
+    void printAll();
 
 };
 

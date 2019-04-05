@@ -15,11 +15,11 @@ class Cell
 {
 protected:
     int x,y; // Position of the cell
-    const std::string legend;
+    std::string legend;
 public:
 
     /** Constructor */
-    Cell(int x,int y,std::string legend);
+    Cell(int x,int y, std::string legend);
 
     /** Getter */
     int getPosX();
@@ -31,7 +31,7 @@ public:
     void setPosY(int y);
 
     /** Abstract Function */
-    virtual void print() = 0;
+    void print();
 };
 
 #endif

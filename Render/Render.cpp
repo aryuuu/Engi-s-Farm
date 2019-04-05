@@ -1,7 +1,10 @@
 #include "Render.hpp"
 #include <iostream>
 #include <fstream>
-#include <string>
+
+
+// Compile
+// g++ Cell.cpp Facility.cpp Land.cpp Facility/Mixer.cpp Facility/Truck.cpp Facility/Well.cpp Render.cpp -o nama_file
 
 /** Constructor */
 Render::Render(int maxX, int maxY)
@@ -18,19 +21,18 @@ Render::Render(int maxX, int maxY)
     {
         for (int j = 0; i < maxY; i++)
         {
-            this->farm[i][j] = new Land(true, i, j);
+            this->farm[i][j] = new Land(true, i, j, "Coop");
         }
     }
 }
 
 /** Constructor: From file */
-Render::Render(std::string filename)
+Render::Render(string filename)
 {
     int count = 0;
-    std::ifstream file(filename);
-    std::string str;
-    count++;
-    std::getline(file, str);
+    ifstream file(filename);
+    string str;
+    getline(file, str);
     this->maxY = str.length();
     while (std::getline(file, str))
     {
@@ -44,18 +46,61 @@ Render::Render(std::string filename)
         this->farm[i] = new Cell *[maxY];
     }
 
-    std::ifstream file2(filename);
+    file.clear();
+    file.seekg(0, ios::beg);
+
     int i = 0;
-    while (std::getline(file, str))
+    while (getline(file, str))
     {
+      cout << str << endl;
       for (int j = 0; j < (this->maxY); j++)
       {
-        // Atur kalau baca land (coop / barn / grassland) atau facility (well / mixer / truck)
+        cout << "Test in" << endl;
+        if (str.at(j) == '*')
+        {
+          this->farm[i][j] = new Land(true, i, j, "Coop");
+        }
+        else if (str.at(j) == 'o')
+        {
+          this->farm[i][j] = new Land(false, i, j, "Coop");
+        }
+        else if (str.at(j) == '@')
+        {
+          this->farm[i][j] = new Land(true, i, j, "Barn");
+        }
+        else if (str.at(j) == 'x')
+        {
+          this->farm[i][j] = new Land(false, i, j, "Barn");
+        }
+        else if (str.at(j) == '#')
+        {
+          this->farm[i][j] = new Land(true, i, j, "Grassland");
+        }
+        else if (str.at(j) == '-')
+        {
+          this->farm[i][j] = new Land(false, i, j, "Grassland");
+        }
+        else if (str.at(j) == 'M')
+        {
+          this->farm[i][j] = new Mixer(i, j);
+        }
+        else if (str.at(j) == 'T')
+        {
+          this->farm[i][j] = new Truck(i, j);
+        }
+        else if (str.at(j) == 'W')
+        {
+          this->farm[i][j] = new Well(i, j);
+        }
+        else
+        {
+          cout << "All wrong" << endl;
+        }
       }
       i++;
     }
 
-
+    file.close();
 }
 
 /** Destructor */
@@ -85,11 +130,14 @@ Cell* Render::getLegendCell(int x, int y)
 }
 
 /** Print Map Ke Layar*/
-void Render::print()
+// Nanti tambah AnimalContainer dan Player ke dalam ini
+void Render::printAll()
 {
     for(int i = 0;i < this->maxX;i++){
         for(int j = 0;j < this->maxY;j++){
-            this->farm[i][j]->print();
+            cout << (i + j);
+            getLegendCell(i, j)->print();
+            cout << " ";
         }
         std::cout<<std::endl;
     }
