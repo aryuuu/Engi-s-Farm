@@ -8,6 +8,8 @@
 **/
 class ButtermilkChicken: public SideProduct{
 private:
+	int nresep = 2; //banyak jenis FarmProduct yang jadi bahan
+	string resep[2] = {"ChickenMeat","CowMilk"}; //daftar nama FarmProduct yang jadi bahan dasar
 	//harga produk
 	const int price = 45000;
 public:
@@ -16,10 +18,12 @@ public:
 	**/
 	ButtermilkChicken();
 
-	/**
-	*mengembalikan true jika FarmProduct
-	*yang dimiliki Player memenuhi resep untuk membuat ButtermilkChicken
-	**/
+	//mengembalikan nama bahan untuk resep di index ke i
+	//asumsi 0 <= i < nresep
+	string getResep(int i);
+
+	//mengembalikan jumlah bahan dasar resep
+	int getNResep();
 
 };
 #endif
