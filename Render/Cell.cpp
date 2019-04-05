@@ -5,8 +5,10 @@ using namespace std;
 /** Constructor */
 Cell::Cell(int x, int y,std::string legend)
 {
+    // cout << "Called" << endl;
     this->x = x;
     this->y = y;
+    this->legend = legend;
 }
 
 /** Getter */
@@ -34,9 +36,4 @@ void Cell::setPosX(int x)
 void Cell::setPosY(int y)
 {
     this->y = y;
-}
-
-void Cell::print()
-{
-  cout << getLegend();
 }

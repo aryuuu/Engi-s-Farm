@@ -55,42 +55,60 @@ Render::Render(string filename)
       cout << str << endl;
       for (int j = 0; j < (this->maxY); j++)
       {
-        cout << str.at(j) << endl;
+        // cout << str.at(j) << endl;
         if (str.at(j) == '*')
         {
-          this->farm[i][j] = new Land(true, i, j, "Coop");
+          //this->farm[i][j] = new Land(true, i, j, "Coop");
+          Land a(true, i, j, "Coop");
+          this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'o')
         {
-          this->farm[i][j] = new Land(false, i, j, "Coop");
+          //this->farm[i][j] = new Land(false, i, j, "Coop");
+          Land a(false, i, j, "Coop");
+          this->farm[i][j] = &a;
         }
         else if (str.at(j) == '@')
         {
-          this->farm[i][j] = new Land(true, i, j, "Barn");
+          //this->farm[i][j] = new Land(true, i, j, "Barn");
+          Land a(true, i, j, "Barn");
+          this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'x')
         {
-          this->farm[i][j] = new Land(false, i, j, "Barn");
+          // this->farm[i][j] = new Land(false, i, j, "Barn");
+          Land a(false, i, j, "Barn");
+          this->farm[i][j] = &a;
         }
         else if (str.at(j) == '#')
         {
-          this->farm[i][j] = new Land(true, i, j, "Grassland");
+          //this->farm[i][j] = new Land(true, i, j, "Grassland");
+          Land a(true, i, j, "Grassland");
+          this->farm[i][j] = &a;
         }
         else if (str.at(j) == '-')
         {
-          this->farm[i][j] = new Land(false, i, j, "Grassland");
+          // this->farm[i][j] = new Land(false, i, j, "Grassland");
+          Land a(false, i, j, "Grassland");
+          this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'M')
         {
-          this->farm[i][j] = new Mixer(i, j);
+          // this->farm[i][j] = new Mixer(i, j);
+          Mixer a(i, j);
+          this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'T')
         {
-          this->farm[i][j] = new Truck(i, j);
+          // this->farm[i][j] = new Truck(i, j);
+          Truck a(i, j);
+          this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'W')
         {
-          this->farm[i][j] = new Well(i, j);
+          // this->farm[i][j] = new Well(i, j);
+          Well a(i, j);
+          this->farm[i][j] = &a;
         }
         else
         {
@@ -135,9 +153,7 @@ void Render::printAll()
 {
     for(int i = 0;i < this->maxX;i++){
         for(int j = 0;j < this->maxY;j++){
-            cout << (i + j);
-            getLegendCell(i, j)->print();
-            cout << " ";
+            farm[i][j] -> print();
         }
         std::cout<<std::endl;
     }

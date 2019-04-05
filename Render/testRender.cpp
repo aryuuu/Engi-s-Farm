@@ -7,6 +7,8 @@ using namespace std;
 int main() {
   Render map("testfile.txt");
   cout << "Read done" << endl;
+  string target = map.getLegendCell(0, 0) -> getKategori();
+  cout << "Target = " << target;
   map.printAll();
   return 0;
 }

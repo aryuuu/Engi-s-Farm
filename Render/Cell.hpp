@@ -31,7 +31,7 @@ public:
     void setPosY(int y);
 
     /** Abstract Function */
-    void print();
+    virtual void print() = 0;
 };
 
 #endif

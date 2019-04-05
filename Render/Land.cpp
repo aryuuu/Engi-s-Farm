@@ -7,7 +7,7 @@ using namespace std;
 //Ctor
 Land::Land(bool isGrass, int x, int y, std::string _kategori) : Cell(x, y,"land")
 {
-    cout << "Land called" << endl;
+    // cout << "Land called" << endl;
     this->isGrass = isGrass;
     this->kategori = _kategori;
 }
