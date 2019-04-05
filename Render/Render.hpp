@@ -48,6 +48,9 @@ public:
     /** isValidPosition */
     bool isValidPos(int x,int y);
 
+    /** isNear */
+    bool isNear(int x,int y,std::string legend);
+
 };
 
 #endif

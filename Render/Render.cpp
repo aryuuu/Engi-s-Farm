@@ -1,7 +1,7 @@
 #include "Render.hpp"
 #include <iostream>
 #include <fstream>
-
+#include <string>
 
 // Compile
 // g++ Cell.cpp Facility.cpp Land.cpp Facility/Mixer.cpp Facility/Truck.cpp Facility/Well.cpp Render.cpp -o nama_file
@@ -171,5 +171,13 @@ bool Render::isValidPos(int x,int y)
   return(this->farm[x][y]->getLegend() == "truck" && 
           this->farm[x][y]->getLegend() == "mixer" &&
           this->farm[x][y]->getLegend() == "well");
-          
+
+}
+
+bool Render::isNear(int x,int y,std::string legend)
+{
+  return(this->farm[x][y + 1]->getLegend() == legend &&
+        this->farm[x + 1][y]->getLegend() == legend &&
+        this->farm[x - 1][y]->getLegend() == legend &&
+        this->farm[x][y - 1]->getLegend() == legend);
 }

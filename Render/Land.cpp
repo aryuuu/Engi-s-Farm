@@ -5,11 +5,10 @@
 using namespace std;
 
 //Ctor
-Land::Land(bool isGrass, int x, int y, std::string _kategori) : Cell(x, y,"land")
+Land::Land(bool isGrass, int x, int y, std::string _legend) : Cell(x, y,_legend)
 {
     // cout << "Land called" << endl;
     this->isGrass = isGrass;
-    this->kategori = _kategori;
 }
 
 /** Setter */
@@ -18,10 +17,6 @@ void Land::setIsGrass(bool isGrass)
 {
     this->isGrass = isGrass;
 }
-void Land::setKategori(std::string kategori)
-{
-    this->kategori = kategori;
-}
 
 /** Getter */
 
@@ -29,17 +24,12 @@ bool Land::getIsGrass()
 {
     return this->isGrass;
 }
-std::string Land::getKategori()
-{
-    return this->kategori;
-}
-
 
 
 /** Fungsi Print Isi dari Land */
 void Land::print()
 {
-    if (this->kategori == "Coop")
+    if (this->legend == "Coop")
     {
       if (isGrass)
       {
@@ -48,7 +38,7 @@ void Land::print()
         cout << "o";
       }
     }
-    else if (this->kategori == "Barn")
+    else if (this->legend == "Barn")
     {
       if (isGrass)
       {
@@ -57,7 +47,7 @@ void Land::print()
         cout << "x";
       }
     }
-    else if (this->kategori == "Grassland")
+    else if (this->legend == "Grassland")
     {
       if (isGrass)
       {
