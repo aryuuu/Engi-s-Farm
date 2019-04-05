@@ -25,8 +25,10 @@ int main(){
 	cout<<"Cek player Move d	:"<<play.getX()<<","<<play.getY()<<endl;
 	HorseMilk H;
 	ChickenEgg C;
+	CowMilk CM;
 	play.addProduct(H);
 	play.addProduct(C);
+	play.addProduct(CM);
 	cout<<"Nama Product Bag 1	:"<<play.getBag(1).getNama()<<"	Harga Product Bag 1	:"<<play.getBag(1).getHarga()<<endl;
 	cout<<"Nama Product Bag 2	:"<<play.getBag(2).getNama()<<"	Harga Product Bag 2	:"<<play.getBag(2).getHarga()<<endl;
 	play.delProduct("HorseMilk");

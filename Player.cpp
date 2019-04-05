@@ -88,7 +88,7 @@ void Player::reduceWater() //Mengkurangi atribut water yang ada didalam gebor (A
 }
 void Player::addProduct(Product Prod) //Menambahkan Product Prod ke Bag dan ditaruh di paling belakang
 {
-	if (this->getSizeBag()<=MAXBAG){
+	if (this->getSizeBag()<MAXBAG){
 		bag.add(Prod);	
 	}else{
 		cout<<"Tas Penuh"<<endl;
@@ -140,6 +140,91 @@ bool Player::isValid(int x,int y) //Mengecek Posisi tersebut ditempati player at
 {
 	return (this->getX()==x&&this->getY()==y);
 }
+
+bool isAvailable(string productname) //mengembalikan true jika SideProduct dengan nama productname bisa dibuat dengan inventori sekarang, false jika tidak
+{
+	if(productname == "ButtermilkChicken"){
+		ButtermilkChicken bmc;
+		int idxResep = 0;
+		int idxbag;
+		// int count = 0; //hitung jumlah bahan resep yang sudah ditemukan 
+		bool found; //flag yang bernilai true jika bahan ditemukan 
+		while(idxResep < bmc.getNResep()){
+			idxbag = 1; //index pointer ke bag
+			found = false; 
+			while(idxbag <= this->getSizeBag()){
+				if(this->getBag(idxbag).getNama() == bmc.getResep(idxResep)){//jika produk ditemukan
+					idxbag = this->getSizeBag(); //skip loop
+					// count++; //tambah jumlah bahan yang sudah ditemukan 
+					found = true;
+				} else { //jika belum
+					idxbag++; //maju satu index
+				}
+			}
+			if(found){ //jika produk ke-idxResep ditemukan
+				idxResep++; //maju
+			} else { //jika tidak
+				return false; 
+			}
+		}
+		return true;
+
+	} else if(productname == "Omellete"){
+		Omellete om;
+		int idxResep = 0;
+		int idxbag;
+		// int count = 0; //hitung jumlah bahan resep yang sudah ditemukan 
+		bool found ; //flag yang bernilai true jika produk ditemukan
+		while(idxResep < om.getNResep()){
+			idxbag = 1;
+			found = false;
+			while(idxbag <= this->getSizeBag()){
+				if(this->getBag(idxbag).getNama() == om.getResep(idxResep)){//jika produk ditemukan
+					idxbag = this->getSizeBag(); //skip loop
+					// count++;
+					found = true;
+				} else { //jika belum
+					idxbag++; //maju satu index
+				}
+			}
+			if(found){
+				idxResep++;
+			} else {
+				return false;
+			}
+		}
+		return true;
+
+	} else if(productname == "Meatball"){
+		Meatball mb;
+		int idxResep = 0;
+		int idxbag;
+		// int count = 0; //hitung jumlah bahan resep yang sudah ditemukan 
+		bool found; //flag yang bernilai true jika bahan ditemukan
+		while(idxResep < mb.getNResep()){
+			idxbag = 1;
+			found = false;//inisialisasi
+			while(idxbag <= this->getSizeBag()){
+				if(this->getBag(idxbag).getNama() == mb.getResep(idxResep)){//jika produk ditemukan
+					idxbag = this->getSizeBag(); //skip loop
+					// count++;
+					found = true;
+				} else { //jika belum
+					idxbag++; //maju satu index
+				}
+			}
+			if(found){
+				idxResep++;
+			} else {
+				return false
+			}
+		}
+		return true;
+
+	} else {
+		return false;
+	}
+} 
 void Player::print() //menulis inventori
 {
 	cout<<"Money	: "<<this->getMoney()<<endl;	

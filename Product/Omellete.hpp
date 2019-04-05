@@ -8,6 +8,8 @@
 **/
 class Omellete: public SideProduct{
 private:
+	int nresep = 2; //banyak jenis FarmProduct yang jadi bahan
+	string resep[2] = {"ChickenEgg","CowMilk"}; //daftar nama FarmProduct yang jadi bahan dasar
 //harga produk
 	const int price = 15000;
 public:
@@ -16,10 +18,14 @@ public:
 	**/
 	Omellete();
 
-	/**
-	*mengembalikan true jika FarmProduct
-	*yang dimiliki Player memenuhi resep untuk membuat Omellete
-	**/
+	//getter resep
+
+	//mengembalikan nama bahan untuk resep di index ke i
+	//asumsi 0 <= i < nresep
+	string getResep(int i);
+
+	//mengembalikan jumlah bahan dasar resep
+	int getNResep();
 	
 };
 #endif
