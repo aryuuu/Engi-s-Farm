@@ -55,7 +55,7 @@ Render::Render(string filename)
       cout << str << endl;
       for (int j = 0; j < (this->maxY); j++)
       {
-        cout << "Test in" << endl;
+        cout << str.at(j) << endl;
         if (str.at(j) == '*')
         {
           this->farm[i][j] = new Land(true, i, j, "Coop");

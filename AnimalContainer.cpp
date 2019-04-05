@@ -65,6 +65,23 @@ bool AnimalContainer::noAnimalOn(Position pos)
   }
   return notFound;
 }
+/** mengembalikan true jika tidak terdapat animal dekat position tersebut */
+bool AnimalContainer::noAnimalNear(Position pos)
+{
+  bool notFound = true;
+  int i = 1;
+  while (notFound && i <= getNumAnimal())
+  {
+    if (getAnimal(i)->isNear(pos))
+    {
+      notFound = false;
+    } else {
+      i++;
+    }
+  }
+  return notFound;
+}
+
 /** menambahkan animal tertentu ke dalam animalList*/
 void AnimalContainer::addAnimal(Animal* ani)
 {

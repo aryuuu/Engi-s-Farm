@@ -33,6 +33,8 @@ public:
   // fungsi-fungsi lain
   /** mengembalikan true jika tidak ada animal di position tersebut*/
   bool noAnimalOn(Position);
+  /** mengembalikan true jika tidak terdapat animal dekat position tersebut */
+  bool noAnimalNear(Position);
   /** menambahkan animal tertentu ke dalam animalList*/
   void addAnimal(Animal*);
   /** menghapus animal tertentu dari animalList*/
