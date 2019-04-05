@@ -97,14 +97,46 @@ void Player::addProduct(Product Prod) //Menambahkan Product Prod ke Bag dan dita
 void Player::addProduct(string Prod) //Menambahkan Nama Product Prod ke Bag dan ditaruh di paling belakang
 {
 	if (Prod=="ButtermilkChicken"){
-		ButtermilkChicken X;	
-		this->addProduct(X);
+		//periksa apakah ButtermilChicken bisa dibuat
+		if(this->isAvailable(Prod)){
+			ButtermilkChicken X;	
+			idxResep = 0;
+			while(idxResep < X.getNResep()){ //hapus bahan dari inventori
+				this->delProduct(X.getResep(idxResep)); 
+				idxResep++;
+			}
+
+			this->addProduct(X);
+		} else {
+			cout << "Tidak cukup bahan" << endl;
+		}
+		
 	} else if (Prod=="Omellete"){
-		Omellete X;	
-		this->addProduct(X);
+		if(this->isAvailable(Prod)){
+			Omellete X;	
+			idxResep = 0;
+			while(idxResep < X.getNResep()){ //hapus bahan dari inventori
+				this->delProduct(X.getResep(idxResep)); 
+				idxResep++;
+			}
+
+			this->addProduct(X);
+		} else {
+			cout << "Tidak cukup bahan" << endl;
+		}
 	} else if (Prod=="Meatball"){
-		Meatball X;	
-		this->addProduct(X);
+		if(this->isAvailable(Prod)){
+			Meatball X;	
+			idxResep = 0;
+			while(idxResep < X.getNResep()){ //hapus bahan dari inventori
+				this->delProduct(X.getResep(idxResep)); 
+				idxResep++;
+			}
+
+			this->addProduct(X);
+		} else {
+			cout << "Tidak cukup bahan" << endl;
+		}
 	} else if (Prod=="ChickenEgg"){
 		ChickenEgg X;	
 		this->addProduct(X);
@@ -225,6 +257,8 @@ bool Player::isAvailable(string productname) //mengembalikan true jika SideProdu
 		return false;
 	}
 } 
+
+
 void Player::print() //menulis inventori
 {
 	cout<<"Money	: "<<this->getMoney()<<endl;	

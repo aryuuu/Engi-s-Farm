@@ -12,16 +12,16 @@ template <class T>
   * Memiliki atribut data dan next; */
 class Node2{
 private:
-  Node2* next;	// posisi Node2 selanjutnya
-  T data;	// Isi dari Node2
+  Node2* next;	/* posisi Node2 selanjutnya*/
+  T data;	/* Isi dari Node2*/
 public:
-  // contructor......
+  /* contructor......*/
   Node2<T>();
   Node2<T>(T _data);
   Node2<T>& operator=(const Node2<T>&);
   ~Node2<T>();
 
-  // getter-setter
+  /* getter-setter*/
   T getData();
   Node2<T>* getNext();
   void setData(T _data);

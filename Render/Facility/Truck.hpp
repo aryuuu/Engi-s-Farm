@@ -21,6 +21,7 @@ public:
 
     /**Print Well Pada Layar*/
     void print();
+    
 };
 
 #endif

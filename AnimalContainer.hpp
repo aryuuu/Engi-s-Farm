@@ -5,7 +5,8 @@
   * @version 1
   * @date 2019-03-18
   */
-
+  
+#include "Render/Render.hpp"
 #include "Animal.hpp"
 #include "LinkedList2.hpp"
 
@@ -49,6 +50,8 @@ public:
   void allAnimalMove(Position, Render);
   /** menambahkan tingkat kelaparan setiap animal (notEatenC)*/
   void allAnimalHungrier();
+  /** membuat setiap animal yang berada di atas rumput dan masih lapar makan */
+  void allAnimalEatGrass(Render);
   /** membunuh setiap binatang yang layak mati*/
   void killDeads();
   /** print semua animal di list */

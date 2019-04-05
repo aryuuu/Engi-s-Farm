@@ -1,5 +1,5 @@
 // Compile
-// g++ Position.cpp Animal.cpp AnimalContainer.cpp Animal/EggProducingAnimal.cpp Animal/MeatProducingAnimal.cpp Animal/MilkProducingAnimal.cpp Animal/Real_Animal/Chicken.cpp Animal/Real_Animal/Cow.cpp Animal/Real_Animal/Duck.cpp Animal/Real_Animal/Goat.cpp Animal/Real_Animal/Horse.cpp Animal/Real_Animal/Rabbit.cpp -o nama_file
+// g++ Position.cpp Animal.cpp AnimalContainer.cpp Animal/EggProducingAnimal.cpp Animal/MeatProducingAnimal.cpp Animal/MilkProducingAnimal.cpp Animal/Real_Animal/Chicken.cpp Animal/Real_Animal/Cow.cpp Animal/Real_Animal/Duck.cpp Animal/Real_Animal/Goat.cpp Animal/Real_Animal/Horse.cpp Animal/Real_Animal/Rabbit.cpp Render/Cell.cpp Render/Land.cpp Render/Facility.cpp Render/Facility/Well.cpp Render/Facility/Truck.cpp Render/Facility/Mixer.cpp Render/Render.cpp -o nama_file
 
 #include "AnimalContainer.hpp"
 #include <iostream>
@@ -163,7 +163,7 @@ void AnimalContainer::allAnimalMove(Position playerPos, Render map)
     Position temp = getAnimal(i)->randomMove();
     if (temp.getAbsis() >= 0 && temp.getOrdinat() >= 0 && temp.getAbsis() < map.getMaxX() && temp.getOrdinat() < map.getMaxY())
     {
-      if (noAnimalOn(temp) && temp != PlayerPos && temp.getLegendCell(temp.getAbsis(), temp.getOrdinat())->getLegend() == getAnimal(i)->getHabitat())
+      if (noAnimalOn(temp) && temp != playerPos && map.getLegendCell(temp.getAbsis(), temp.getOrdinat())->getLegend() == getAnimal(i)->getHabitat())
       {
         getAnimal(i)->setLocation(temp);
       }
@@ -176,6 +176,22 @@ void AnimalContainer::allAnimalHungrier()
   for (int i = 1; i <= getNumAnimal(); i++)
   {
     getAnimal(i)->hungrier();
+  }
+}
+/** membuat setiap animal yang berada di atas rumput dan masih lapar makan */
+void AnimalContainer::allAnimalEatGrass(Render map)
+{
+  for (int i = 1; i <= getNumAnimal(); i++)
+  {
+    if (getAnimal(i)->getHasEaten() == false)
+    {
+      Position pos = getAnimal(i)->getLocation();
+      if (map.getLegendCell(pos.getAbsis(), pos.getOrdinat())->isGrassOn() == true)
+      {
+        map.getLegendCell(pos.getAbsis(), pos.getOrdinat())->eatGrass();
+        getAnimal(i)->animalHasEaten();
+      }
+    }
   }
 }
 /** membunuh setiap binatang yang layak mati*/
