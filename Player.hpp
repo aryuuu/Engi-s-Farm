@@ -7,17 +7,17 @@
   */
 
 #include "LinkedList.hpp"
-#include "Product.hpp"
-#include "ButtermilkChicken.cpp"
-#include "ChickenEgg.cpp"
-#include "ChickenMeat.cpp"
-#include "CowMeat.cpp"
-#include "CowMilk.cpp"
-#include "DuckEgg.cpp"
-#include "HorseMilk.cpp"
-#include "Meatball.cpp"
-#include "Omellete.cpp"
-#include "RabbitMeat.cpp"
+#include "Product/Product.hpp"
+#include "Product/ButtermilkChicken.hpp"
+#include "Product/ChickenEgg.hpp"
+#include "Product/ChickenMeat.hpp"
+#include "Product/CowMeat.hpp"
+#include "Product/CowMilk.hpp"
+#include "Product/DuckEgg.hpp"
+#include "Product/HorseMilk.hpp"
+#include "Product/Meatball.hpp"
+#include "Product/Omellete.hpp"
+#include "Product/RabbitMeat.hpp"
 #include <iostream>
 #ifndef _PLAYER_HPP
 #define _PLAYER_HPP

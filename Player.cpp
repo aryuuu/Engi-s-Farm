@@ -2,7 +2,7 @@
 #define MAXWATER 25
 #define MAXBAG 25
 #include "Player.hpp"
-#include "Product.cpp"
+
 using namespace std;
 Player::Player(){
 	setMoney(0);
