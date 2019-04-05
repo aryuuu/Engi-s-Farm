@@ -19,6 +19,7 @@ class Facility : public Cell
 
     //Abstract Function
     virtual void print() = 0;
+    
     bool isGrassOn();
 
     void growGrass();

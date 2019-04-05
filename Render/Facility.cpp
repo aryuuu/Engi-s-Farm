@@ -5,17 +5,17 @@ Facility::Facility(int x, int y, std::string legend) : Cell(x, y, legend)
 {
 }
 
-bool isGrassOn()
+bool Facility::isGrassOn()
 {
     return false;
 }
 
-void growGrass()
+void Facility::growGrass()
 {
     /** DO NOTHING */
 }
 
-void eatGrass()
+void Facility::eatGrass()
 {
     /** DO NOTHING */
 }
