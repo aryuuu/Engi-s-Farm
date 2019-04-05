@@ -141,7 +141,7 @@ bool Player::isValid(int x,int y) //Mengecek Posisi tersebut ditempati player at
 	return (this->getX()==x&&this->getY()==y);
 }
 
-bool isAvailable(string productname) //mengembalikan true jika SideProduct dengan nama productname bisa dibuat dengan inventori sekarang, false jika tidak
+bool Player::isAvailable(string productname) //mengembalikan true jika SideProduct dengan nama productname bisa dibuat dengan inventori sekarang, false jika tidak
 {
 	if(productname == "ButtermilkChicken"){
 		ButtermilkChicken bmc;
@@ -152,9 +152,9 @@ bool isAvailable(string productname) //mengembalikan true jika SideProduct denga
 		while(idxResep < bmc.getNResep()){
 			idxbag = 1; //index pointer ke bag
 			found = false; 
-			while(idxbag <= this->getSizeBag()){
+			while(idxbag <= this->getSizeBag() && !found){
 				if(this->getBag(idxbag).getNama() == bmc.getResep(idxResep)){//jika produk ditemukan
-					idxbag = this->getSizeBag(); //skip loop
+					//idxbag = this->getSizeBag(); //skip loop
 					// count++; //tambah jumlah bahan yang sudah ditemukan 
 					found = true;
 				} else { //jika belum
@@ -178,9 +178,9 @@ bool isAvailable(string productname) //mengembalikan true jika SideProduct denga
 		while(idxResep < om.getNResep()){
 			idxbag = 1;
 			found = false;
-			while(idxbag <= this->getSizeBag()){
+			while(idxbag <= this->getSizeBag() && !found){
 				if(this->getBag(idxbag).getNama() == om.getResep(idxResep)){//jika produk ditemukan
-					idxbag = this->getSizeBag(); //skip loop
+//					idxbag = this->getSizeBag() ; //skip loop
 					// count++;
 					found = true;
 				} else { //jika belum
@@ -201,12 +201,12 @@ bool isAvailable(string productname) //mengembalikan true jika SideProduct denga
 		int idxbag;
 		// int count = 0; //hitung jumlah bahan resep yang sudah ditemukan 
 		bool found; //flag yang bernilai true jika bahan ditemukan
-		while(idxResep < mb.getNResep()){
+		while(idxResep < mb.getNResep() && !found){
 			idxbag = 1;
 			found = false;//inisialisasi
 			while(idxbag <= this->getSizeBag()){
 				if(this->getBag(idxbag).getNama() == mb.getResep(idxResep)){//jika produk ditemukan
-					idxbag = this->getSizeBag(); //skip loop
+			//		idxbag = this->getSizeBag(); //skip loop
 					// count++;
 					found = true;
 				} else { //jika belum
@@ -216,7 +216,7 @@ bool isAvailable(string productname) //mengembalikan true jika SideProduct denga
 			if(found){
 				idxResep++;
 			} else {
-				return false
+				return false;
 			}
 		}
 		return true;
