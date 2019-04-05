@@ -38,87 +38,92 @@ Render::Render(string filename)
     {
       count++;
     }
-    this->maxX = count;
+    this->maxX = count + 1;
 
-    this->farm = new Cell **[maxX];
-    for (int i = 0; i < maxY; i++)
+    this->farm = new Cell**[maxX];
+    for (int i = 0; i < maxX; i++)
     {
-        this->farm[i] = new Cell *[maxY];
+        this->farm[i] = new Cell*[maxY];
     }
 
     file.clear();
     file.seekg(0, ios::beg);
 
     int i = 0;
-    while (getline(file, str))
+    while (std::getline(file, str))
     {
-      cout << str << endl;
-      for (int j = 0; j < (this->maxY); j++)
+      //cout << str << endl;
+      for (int j = 0; j < this->maxY; j++)
       {
         // cout << str.at(j) << endl;
         if (str.at(j) == '*')
         {
-          //this->farm[i][j] = new Land(true, i, j, "Coop");
-          Land a(true, i, j, "Coop");
-          this->farm[i][j] = &a;
+          this->farm[i][j] = new Land(true, i, j, "Coop");
+          // Land a(true, i, j, "Coop");
+          // this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'o')
         {
-          //this->farm[i][j] = new Land(false, i, j, "Coop");
-          Land a(false, i, j, "Coop");
-          this->farm[i][j] = &a;
+          //cout << "Test" << endl;
+          //cout << i << " " << j << endl;
+          this->farm[i][j] = new Land(false, i, j, "Coop");
+          // Land a(false, i, j, "Coop");
+          // this->farm[i][j] = &a;
         }
         else if (str.at(j) == '@')
         {
-          //this->farm[i][j] = new Land(true, i, j, "Barn");
-          Land a(true, i, j, "Barn");
-          this->farm[i][j] = &a;
+          this->farm[i][j] = new Land(true, i, j, "Barn");
+          // Land a(true, i, j, "Barn");
+          // this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'x')
         {
-          // this->farm[i][j] = new Land(false, i, j, "Barn");
-          Land a(false, i, j, "Barn");
-          this->farm[i][j] = &a;
+          this->farm[i][j] = new Land(false, i, j, "Barn");
+          // Land a(false, i, j, "Barn");
+          // this->farm[i][j] = &a;
         }
         else if (str.at(j) == '#')
         {
-          //this->farm[i][j] = new Land(true, i, j, "Grassland");
-          Land a(true, i, j, "Grassland");
-          this->farm[i][j] = &a;
+          this->farm[i][j] = new Land(true, i, j, "Grassland");
+          // Land a(true, i, j, "Grassland");
+          // this->farm[i][j] = &a;
         }
         else if (str.at(j) == '-')
         {
-          // this->farm[i][j] = new Land(false, i, j, "Grassland");
-          Land a(false, i, j, "Grassland");
-          this->farm[i][j] = &a;
+          this->farm[i][j] = new Land(false, i, j, "Grassland");
+          // Land a(false, i, j, "Grassland");
+          // this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'M')
         {
-          // this->farm[i][j] = new Mixer(i, j);
-          Mixer a(i, j);
-          this->farm[i][j] = &a;
+          this->farm[i][j] = new Mixer(i, j);
+          // Mixer a(i, j);
+          // this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'T')
         {
-          // this->farm[i][j] = new Truck(i, j);
-          Truck a(i, j);
-          this->farm[i][j] = &a;
+          this->farm[i][j] = new Truck(i, j);
+          // Truck a(i, j);
+          // this->farm[i][j] = &a;
         }
         else if (str.at(j) == 'W')
         {
-          // this->farm[i][j] = new Well(i, j);
-          Well a(i, j);
-          this->farm[i][j] = &a;
+          this->farm[i][j] = new Well(i, j);
+          // Well a(i, j);
+          // this->farm[i][j] = &a;
         }
         else
         {
           cout << "All wrong" << endl;
         }
+        //cout << j << endl;
+
       }
       i++;
+      // cout << i << endl;
     }
-
     file.close();
+    // cout << "Done" << endl;
 }
 
 /** Destructor */
@@ -151,7 +156,9 @@ Cell* Render::getLegendCell(int x, int y)
 // Nanti tambah AnimalContainer dan Player ke dalam ini
 void Render::printAll()
 {
+  // cout << "Called" << endl;
     for(int i = 0;i < this->maxX;i++){
+      // cout << "Test i" << endl;
         for(int j = 0;j < this->maxY;j++){
             farm[i][j] -> print();
         }

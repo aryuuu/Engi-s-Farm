@@ -39,7 +39,6 @@ std::string Land::getKategori()
 /** Fungsi Print Isi dari Land */
 void Land::print()
 {
-    cout << "Called" << endl;
     if (this->kategori == "Coop")
     {
       if (isGrass)
