@@ -14,24 +14,26 @@
 class Land : public Cell
 {
   private:
-    bool isGrass;
+	bool isGrass;
+
   public:
-    //Ctor
-    Land(bool isGrass,int x,int y, std::string _legend);
+	//Ctor
+	Land(bool isGrass, int x, int y, std::string _legend);
 
-    /** Setter */
-    void setIsGrass(bool isGrass);
+	/** Setter */
+	void setIsGrass(bool isGrass);
 
-    /** Getter */
-    bool getIsGrass();
+	/** Getter */
+	bool getIsGrass();
 
+	/** Fungsi Print Isi dari Land */
+	void print();
 
+	bool isGrass();
 
-    /** Fungsi Print Isi dari Land */
-    void print();
+	void growGrass();
 
-    /** Fungsi Water untuk mengubah isGrass saat sebuah land disiram */
-    void water();
+	void eatGrass();
 
 };
 

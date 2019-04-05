@@ -5,7 +5,7 @@
 using namespace std;
 
 //Ctor
-Land::Land(bool isGrass, int x, int y, std::string _legend) : Cell(x, y,_legend)
+Land::Land(bool isGrass, int x, int y, std::string _legend) : Cell(x, y, _legend)
 {
     // cout << "Land called" << endl;
     this->isGrass = isGrass;
@@ -25,43 +25,59 @@ bool Land::getIsGrass()
     return this->isGrass;
 }
 
-
 /** Fungsi Print Isi dari Land */
 void Land::print()
 {
     if (this->legend == "Coop")
     {
-      if (isGrass)
-      {
-        cout << "*";
-      } else {
-        cout << "o";
-      }
+        if (isGrass)
+        {
+            cout << "*";
+        }
+        else
+        {
+            cout << "o";
+        }
     }
     else if (this->legend == "Barn")
     {
-      if (isGrass)
-      {
-        cout << "@";
-      } else {
-        cout << "x";
-      }
+        if (isGrass)
+        {
+            cout << "@";
+        }
+        else
+        {
+            cout << "x";
+        }
     }
     else if (this->legend == "Grassland")
     {
-      if (isGrass)
-      {
-        cout << "#";
-      } else {
-        cout << "-";
-      }
-    } else {
-      cout << " ";
+        if (isGrass)
+        {
+            cout << "#";
+        }
+        else
+        {
+            cout << "-";
+        }
+    }
+    else
+    {
+        cout << " ";
     }
 }
 
-/** Fungsi Water untuk mengubah isGrass saat sebuah land disiram */
-void Land::water()
+bool Land::isGrass()
+{
+    return this->isGrass;
+}
+
+void Land::growGrass()
 {
     this->isGrass = true;
+}
+
+void Land::eatGrass()
+{
+    this->isGrass = false;
 }

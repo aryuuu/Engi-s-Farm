@@ -25,6 +25,7 @@ public:
     int getPosX();
     int getPosY();
     std::string getLegend();
+    virtual bool isGrass() = 0;
 
     /** Setter */
     void setPosX(int x);
@@ -32,8 +33,8 @@ public:
 
     /** Abstract Function */
     virtual void print() = 0;
-    virtual void growGrass();
-    virtual void eatGrass();
+    virtual void growGrass() = 0;
+    virtual void eatGrass() = 0;
 };
 
 #endif
