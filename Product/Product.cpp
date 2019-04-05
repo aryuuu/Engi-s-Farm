@@ -2,7 +2,9 @@
 #include <iostream>
 using namespace std;
 
-//ctor buat bikin list
+/**
+*constructor
+**/	
 Product::Product(){
 	this->setNama("-");
 	this->setHarga(-1);

@@ -18,11 +18,15 @@ public:
 	**/
 	Meatball();
 
-	//mengembalikan nama bahan untuk resep di index ke i
-	//asumsi 0 <= i < nresep
+	/**
+	*mengembalikan nama resep di index i
+	*asumsi 0 <= i < nresep
+	**/
 	string getResep(int i);
 
-	//mengembalikan jumlah bahan dasar resep
+	/**
+	*mengembalikan jumlah resep
+	**/
 	int getNResep();
 	
 };

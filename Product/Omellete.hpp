@@ -1,6 +1,6 @@
 #include "SideProduct.hpp"
-#ifndef COMBOSTEAK_HPP
-#define COMBOSTEAK_HPP 
+#ifndef OMELLETE_H
+#define OMELLETE_H 
 
 /**
 *merupakan kelas hasil olahan
@@ -18,13 +18,17 @@ public:
 	**/
 	Omellete();
 
-	//getter resep
-
-	//mengembalikan nama bahan untuk resep di index ke i
-	//asumsi 0 <= i < nresep
+	/**
+	*getter resep
+	*
+	*mengembalikan nama resep di index ke-i
+	*asumsi 0 <= i < nresep 
+	**/
 	string getResep(int i);
 
-	//mengembalikan jumlah bahan dasar resep
+	/**
+	*mengembalikan jumlah resep
+	**/
 	int getNResep();
 	
 };
