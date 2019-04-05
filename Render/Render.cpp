@@ -165,3 +165,11 @@ void Render::printAll()
         std::cout<<std::endl;
     }
 }
+
+bool Render::isValidPos(int x,int y)
+{
+  return(this->farm[x][y]->getLegend() == "truck" && 
+          this->farm[x][y]->getLegend() == "mixer" &&
+          this->farm[x][y]->getLegend() == "well");
+          
+}

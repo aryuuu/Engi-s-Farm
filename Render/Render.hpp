@@ -45,6 +45,9 @@ public:
     // Nanti tambah AnimalContainer dan Player ke dalam ini
     void printAll();
 
+    /** isValidPosition */
+    bool isValidPos(int x,int y);
+
 };
 
 #endif
