@@ -9,7 +9,4 @@ ButtermilkChicken::ButtermilkChicken(){
 }
 
 
-//return true if player can make ButtermilkChicken with items in his current inventory
-bool ButtermilkChicken::available(Player P){
-	
-}
+

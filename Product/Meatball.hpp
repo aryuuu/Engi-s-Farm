@@ -16,11 +16,6 @@ public:
 	**/
 	Meatball();
 
-	/**
-	*mengembalikan true jika FarmProduct
-	*yang dimiliki Player memenuhi resep untuk membuat Meatball
-	**/
-	bool available(Player P);
 	
 };
 #endif

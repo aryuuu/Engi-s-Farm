@@ -8,7 +8,3 @@ Meatball::Meatball(){
 	this->setHarga(this->price);
 }
 
-//check if player can make Meatball with current item in his inventory
-bool Omellete::available(Player P){
-
-}

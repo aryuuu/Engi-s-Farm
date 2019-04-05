@@ -20,7 +20,6 @@ public:
 	*mengembalikan true jika FarmProduct
 	*yang dimiliki Player memenuhi resep untuk membuat ButtermilkChicken
 	**/
-	bool available(Player P);
 
 };
 #endif
