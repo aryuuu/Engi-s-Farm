@@ -46,7 +46,7 @@ public:
 
 
   /** menggerakkan seluruh animal di dalam list ini dengan move tidak valid (divalidkan dengan Render)*/
-  void allAnimalMove(int, int);
+  void allAnimalMove(Position, Render);
   /** menambahkan tingkat kelaparan setiap animal (notEatenC)*/
   void allAnimalHungrier();
   /** membunuh setiap binatang yang layak mati*/

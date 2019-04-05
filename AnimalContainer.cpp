@@ -156,14 +156,14 @@ Animal* AnimalContainer::findNear(Position pos)
 }
 
 /** menggerakkan seluruh animal di dalam list ini dengan move tidak valid (divalidkan dengan Render)*/
-void AnimalContainer::allAnimalMove(int brs, int kol)
+void AnimalContainer::allAnimalMove(Position playerPos, Render map)
 {
   for (int i = 1; i <= getNumAnimal(); i++)
   {
     Position temp = getAnimal(i)->randomMove();
-    if (temp.getAbsis() > 0 && temp.getOrdinat() > 0 && temp.getAbsis() < brs && temp.getOrdinat() < kol)
+    if (temp.getAbsis() >= 0 && temp.getOrdinat() >= 0 && temp.getAbsis() < map.getMaxX() && temp.getOrdinat() < map.getMaxY())
     {
-      if (noAnimalOn(temp))
+      if (noAnimalOn(temp) && temp != PlayerPos && temp.getLegendCell(temp.getAbsis(), temp.getOrdinat())->getLegend() == getAnimal(i)->getHabitat())
       {
         getAnimal(i)->setLocation(temp);
       }

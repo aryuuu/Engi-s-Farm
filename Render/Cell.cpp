@@ -37,3 +37,7 @@ void Cell::setPosY(int y)
 {
     this->y = y;
 }
+
+/** Abstract Function */
+void Cell::growGrass();
+void Cell::eatGrass();

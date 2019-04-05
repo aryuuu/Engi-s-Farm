@@ -32,6 +32,8 @@ public:
 
     /** Abstract Function */
     virtual void print() = 0;
+    virtual void growGrass();
+    virtual void eatGrass();
 };
 
 #endif
