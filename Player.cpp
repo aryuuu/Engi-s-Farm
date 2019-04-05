@@ -1,3 +1,4 @@
+    
 #include <iostream>
 #define MAXWATER 25
 #define MAXBAG 25
@@ -78,9 +79,13 @@ void Player::delProduct(string NamaProduct) //Menghapus product dari bag dengan 
 }
 void Player::delProductAll() //Mengosongkan Bag
 {
+	int harga=0;
 	while(!bag.isEmpty()){
+		harga+=bag.get(1).getHarga();
 		bag.remove(bag.get(1));
 	}
+	this->addMoney(harga);
+	
 }
 void Player::reduceWater() //Mengkurangi atribut water yang ada didalam gebor (Alat penyiraman)
 {
@@ -96,6 +101,7 @@ void Player::addProduct(Product Prod) //Menambahkan Product Prod ke Bag dan dita
 }
 void Player::addProduct(string Prod) //Menambahkan Nama Product Prod ke Bag dan ditaruh di paling belakang
 {
+	int idxResep;
 	if (Prod=="ButtermilkChicken"){
 		//periksa apakah ButtermilChicken bisa dibuat
 		if(this->isAvailable(Prod)){
