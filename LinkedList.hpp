@@ -17,14 +17,14 @@ template <class T>
   * Memiliki method untuk memanipulasi list; */
 class LinkedList{
 public:
-    int length; // Panjang list
-    Node<T>* head; // Alamat indeks awal List
-    LinkedList(); // ctor
-    int find(T element) const; //Mengembalikan indeks dimana elemen ditemukan, -1 jika tidak ada
-	bool isEmpty() const; //Mengembalikan True jika linked list kosong
-	void add(T element); //Menambahkan elemen sebagai elemen paling akhir
-	void remove(T element); //Membuang elemen dari linked list
-	T get(int indeks) const; //Mengembalikan elemen pada indeks
+    int length; /* Panjang list */
+    Node<T>* head; /* Alamat indeks awal List */
+    LinkedList(); /* ctor */
+    int find(T element) const; /*Mengembalikan indeks dimana elemen ditemukan, -1 jika tidak ada*/
+	bool isEmpty() const; /*Mengembalikan True jika linked list kosong*/
+	void add(T element); /*Menambahkan elemen sebagai elemen paling akhir*/
+	void remove(T element); /*Membuang elemen dari linked list*/
+	T get(int indeks) const; /*Mengembalikan elemen pada indeks*/
 };
 template <class T>
 LinkedList<T>::LinkedList(){

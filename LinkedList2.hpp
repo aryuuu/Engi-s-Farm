@@ -17,23 +17,23 @@ template <class T>
   * Memiliki method untuk memanipulasi list; */
 class LinkedList2{
 public:
-    // Atribut
-    int length; // Panjang list
-    Node2<T> *head; // Alamat indeks awal List
+    /* Atribut*/
+    int length; /* Panjang list*/
+    Node2<T> *head; /* Alamat indeks awal List*/
 
-    // Getter-setter
+    /* Getter-setter*/
     int getLength();
 
-    // Method
-    LinkedList2<T>(); // ctor
-    ~LinkedList2<T>(); // dtor -> menghapus semua LinkedList2 dan Node2-Node2 di dalamnya
+    /* Method*/
+    LinkedList2<T>(); /* ctor*/
+    ~LinkedList2<T>(); /* dtor -> menghapus semua LinkedList2 dan Node2-Node2 di dalamnya*/
 
-    int find(T element) const; //Mengembalikan indeks dimana elemen ditemukan, -1 jika tidak ada
-	  bool isEmpty() const; //Mengembalikan True jika linked list kosong
-	  void add(T element); //Menambahkan elemen sebagai elemen paling akhir
-	  void remove(T element); //Membuang elemen dari linked list
-	  T getElmt(int indeks) const; //Mengembalikan elemen pada indeks
-    void setElmt(T data, int indeks);
+    int find(T element) const; /*Mengembalikan indeks dimana elemen ditemukan, -1 jika tidak ada*/
+	bool isEmpty() const; /*Mengembalikan True jika linked list kosong*/
+	void add(T element); /*Menambahkan elemen sebagai elemen paling akhir*/
+	void remove(T element); /*Membuang elemen dari linked list*/
+	T getElmt(int indeks) const; /*Mengembalikan elemen pada indeks*/
+    void setElmt(T data, int indeks); /*Set elemen pada indeks menjadi data*/
 };
 
 

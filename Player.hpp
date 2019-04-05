@@ -56,7 +56,6 @@ class Player{
 		void addMoney(int harga); //Menambah atribut money sesuai dengan harga
 		bool isValid(int x,int y);//Mengecek Posisi tersebut ditempati player atau tidak mengembalikan true jika posisi tersebut ditempati player
 		bool isAvailable(string productname); //mengembalikan true jika SideProduct dengan nama productname bisa dibuat dengan inventori sekarang, false jika tidak
-
 		void print(); //menulis inventori
 };
 #endif
