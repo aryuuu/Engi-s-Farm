@@ -7,7 +7,17 @@
   */
 
 #include "LinkedList.hpp"
-#include "Product/Product.hpp"
+#include "Product.hpp"
+#include "ButtermilkChicken.cpp"
+#include "ChickenEgg.cpp"
+#include "ChickenMeat.cpp"
+#include "CowMeat.cpp"
+#include "CowMilk.cpp"
+#include "DuckEgg.cpp"
+#include "HorseMilk.cpp"
+#include "Meatball.cpp"
+#include "Omellete.cpp"
+#include "RabbitMeat.cpp"
 #include <iostream>
 #ifndef _PLAYER_HPP
 #define _PLAYER_HPP
@@ -35,12 +45,17 @@ class Player{
 		void setX(int x); //mengubah nilai atribut x (posisi Absis player)
 		void setY(int y);//mengubah nilai atribut y (posisi Ordinat player)
 		void setBag(int idx, Product prod); //menghapus produk pada indeks i lalu menambahkan produk prod
+		
 		void playerMove(char move); //Memindahkan posisi player ke atas / kanan / bawah / kiri dengan parameter input charr u/r/d/l dan posisi harus valid (harus divalidasi dulu)
 		void delProduct(string NamaProduct); //Menghapus product dari bag dengan parameter input NamaProduct
 		void delProductAll(); //Mengosongkan Bag
 		void reduceWater(); //Mengkurangi atribut water yang ada didalam gebor (Alat penyiraman)
 		void addProduct(Product Prod); //Menambahkan Product Prod ke Bag dan ditaruh di paling belakang
+		void addProduct(string Prod); //Menambahkan Nama Product Prod ke Bag dan ditaruh di paling belakang
 		void addWater(); //Mengisi gebor dengan air secara maksimal (sesuai kapasitas) dengan mengubah atribut water
 		void addMoney(int harga); //Menambah atribut money sesuai dengan harga
+		bool isValid(int x,int y);//Mengecek Posisi tersebut ditempati player atau tidak mengembalikan true jika posisi tersebut ditempati player
+		
+		void print(); //menulis inventori
 };
 #endif

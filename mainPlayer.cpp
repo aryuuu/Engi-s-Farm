@@ -1,7 +1,5 @@
 #include <iostream>
 #include "Player.cpp"
-#include "HorseMilk.cpp"
-#include "ChickenEgg.cpp"
 using namespace std;
 int main(){
 	Player play;
@@ -37,10 +35,11 @@ int main(){
 	play.addProduct(H);
 	play.addProduct(C);
 	play.addProduct(C);
+	play.addProduct("Meatball");
 	cout<<"Ukuran isi Tas		:"<<play.getSizeBag()<<endl;
 	play.setBag(1,H); //menghapus produk pada indeks 1 lalu menambahkan produk HorseMilk
 	for(int i=1;i<=play.getSizeBag();i++){
 		cout<<"Nama Product Bag "<<i<<"	:"<<play.getBag(i).getNama()<<"	Harga Product Bag "<<i<<"	:"<<play.getBag(i).getHarga()<<endl;
 	}
-	
+	play.print();
 }

@@ -1,5 +1,6 @@
 #include <iostream>
-#define MAX 25
+#define MAXWATER 25
+#define MAXBAG 25
 #include "Player.hpp"
 #include "Product.cpp"
 using namespace std;
@@ -87,13 +88,69 @@ void Player::reduceWater() //Mengkurangi atribut water yang ada didalam gebor (A
 }
 void Player::addProduct(Product Prod) //Menambahkan Product Prod ke Bag dan ditaruh di paling belakang
 {
-	bag.add(Prod);	
+	if (this->getSizeBag()<=MAXBAG){
+		bag.add(Prod);	
+	}else{
+		cout<<"Tas Penuh"<<endl;
+	}
+}
+void Player::addProduct(string Prod) //Menambahkan Nama Product Prod ke Bag dan ditaruh di paling belakang
+{
+	if (Prod=="ButtermilkChicken"){
+		ButtermilkChicken X;	
+		this->addProduct(X);
+	} else if (Prod=="Omellete"){
+		Omellete X;	
+		this->addProduct(X);
+	} else if (Prod=="Meatball"){
+		Meatball X;	
+		this->addProduct(X);
+	} else if (Prod=="ChickenEgg"){
+		ChickenEgg X;	
+		this->addProduct(X);
+	} else if (Prod=="ChickenMeat"){
+		ChickenMeat X;	
+		this->addProduct(X);
+	} else if (Prod=="CowMeat"){
+		CowMeat X;	
+		this->addProduct(X);
+	} else if (Prod=="CowMilk"){
+		CowMilk X;	
+		this->addProduct(X);
+	} else if (Prod=="DuckEgg"){
+		DuckEgg X;	
+		this->addProduct(X);
+	} else if (Prod=="HorseMilk"){
+		HorseMilk X;	
+		this->addProduct(X);
+	} else if (Prod=="RabbitMeat"){
+		RabbitMeat X;	
+		this->addProduct(X);
+	};
 }
 void Player::addWater() //Mengisi gebor dengan air secara maksimal (sesuai kapasitas) dengan mengubah atribut water 
 {
-	water=MAX;
+	water=MAXWATER;
 }
 void Player::addMoney(int harga) //Menambah atribut money sesuai dengan harga
 {
 	money+=harga;
+}
+bool Player::isValid(int x,int y) //Mengecek Posisi tersebut ditempati player atau tidak mengembalikan true jika posisi tersebut ditempati player
+{
+	return (this->getX()==x&&this->getY()==y);
+}
+void Player::print() //menulis inventori
+{
+	cout<<"Money	: "<<this->getMoney()<<endl;	
+	cout<<"Water	: "<<this->getWater()<<endl;
+	cout<<"bag	: ";
+	for(int i=1;i<=this->getSizeBag();i++){
+		cout<<this->getBag(i).getNama();
+		if(i!=this->getSizeBag()){
+			cout<<", ";
+		}else{
+			cout<<endl;
+		}
+	}
 }
