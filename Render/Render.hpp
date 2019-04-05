@@ -12,7 +12,7 @@
 #include "./Facility/Truck.hpp"
 #include "./Facility/Well.hpp"
 #include "../Player.hpp"
-#include "../AnimalContainer.hpp"
+// #include "../AnimalContainer.hpp"
 #include <string>
 
 #ifndef _RENDER_HPP
@@ -43,7 +43,7 @@ public:
 
     /** Print Map Ke Layar*/
     // Nanti tambah AnimalContainer dan Player ke dalam ini
-    void printAll();
+    // void printAll();
 
     /** isValidPosition */
     bool isValidPos(int x,int y);
