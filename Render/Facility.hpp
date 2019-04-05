@@ -13,12 +13,17 @@
 
 class Facility : public Cell
 {
-public:
+  public:
     /* Constructor */
     Facility(int x, int y, std::string legend);
 
     //Abstract Function
     virtual void print() = 0;
+    bool isGrass();
+
+    void growGrass();
+
+    void eatGrass();
 };
 
 #endif
