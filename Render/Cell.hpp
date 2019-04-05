@@ -13,13 +13,13 @@
 
 class Cell
 {
-protected:
-    int x,y; // Position of the cell
+  protected:
+    int x, y; // Position of the cell
     std::string legend;
-public:
 
+  public:
     /** Constructor */
-    Cell(int x,int y, std::string legend);
+    Cell(int x, int y, std::string legend);
 
     /** Getter */
     int getPosX();
