@@ -13,7 +13,7 @@ int main(){
 		P.print();
 		cin>>cmd;
 		if(cmd=="u"){
-			
+
 			P.playerMove('u');
 		}else if(cmd=="l"){
 			P.playerMove('l');
@@ -21,13 +21,13 @@ int main(){
 			P.playerMove('d');
 		}else if(cmd=="r"){
 			P.playerMove('r');
-		}else if(cmd=="kill"){
+		} else if(cmd=="kill") {
 			//udah dapet hewan x
 			if(!AC.noAnimalNear()){
 				if(!AC.noAnimalOn(Position(Pos.getAbsis()-1,Pos.getOrdinat()))){
 					if (AC.findOnPos(Position(Pos.getAbsis()-1,Pos.getOrdinat()))->canBeKilled()){
 						P.addProduct(AC.findOnPos(Position(Pos.getAbsis()-1,Pos.getOrdinat()))->killProduct());
-					}	
+					}
 				}else if(!AC.noAnimalOn(Position(Pos.getAbsis(),Pos.getOrdinat()-1))){
 					if (AC.findOnPos(Position(Pos.getAbsis(),Pos.getOrdinat()-1))->canBeKilled()){
 						P.addProduct(AC.findOnPos(Position(Pos.getAbsis(),Pos.getOrdinat()-1))->killProduct());
@@ -49,7 +49,7 @@ int main(){
 				if(!AC.noAnimalOn(Position(Pos.getAbsis()-1,Pos.getOrdinat()))){
 					if (AC.findOnPos(Position(Pos.getAbsis()-1,Pos.getOrdinat()))->canBeInteracted()){
 						P.addProduct(AC.findOnPos(Position(Pos.getAbsis()-1,Pos.getOrdinat()))->interactProduct());
-					}	
+					}
 				}else if(!AC.noAnimalOn(Position(Pos.getAbsis(),Pos.getOrdinat()-1))){
 					if (AC.findOnPos(Position(Pos.getAbsis(),Pos.getOrdinat()-1))->canBeInteracted()){
 						P.addProduct(AC.findOnPos(Position(Pos.getAbsis(),Pos.getOrdinat()-1))->interactProduct());
@@ -70,7 +70,7 @@ int main(){
 			Position Pos(P.getX(),P.getY());
 			if(!AC.noAnimalNear(Pos)){
 				if(!AC.noAnimalOn(Position(Pos.getAbsis()-1,Pos.getOrdinat()))){
-					AC.findOnPos(Position(Pos.getAbsis()-1,Pos.getOrdinat()))->sound();	
+					AC.findOnPos(Position(Pos.getAbsis()-1,Pos.getOrdinat()))->sound();
 				}else if(!AC.noAnimalOn(Position(Pos.getAbsis(),Pos.getOrdinat()-1))){
 					AC.findOnPos(Position(Pos.getAbsis(),Pos.getOrdinat()-1))->sound();
 				}else if(!AC.noAnimalOn(Position(Pos.getAbsis(),Pos.getOrdinat()+1))){
