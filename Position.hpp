@@ -33,6 +33,8 @@ public:
 
   /** operator overloading ==, mengembalikan true jika x dan y adalah sama */
   bool operator== (const Position& p);
+  /** operator overloading !=, mengembalikan true jika x dan y tidak sama */
+  bool operator!= (const Position& p);
 };
 
 #endif

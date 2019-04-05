@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+using namespace std;
 
 // Compile
 // g++ Cell.cpp Facility.cpp Land.cpp Facility/Mixer.cpp Facility/Truck.cpp Facility/Well.cpp Render.cpp -o nama_file
@@ -27,7 +28,7 @@ Render::Render(int maxX, int maxY)
 }
 
 /** Constructor: From file */
-Render::Render(string filename)
+Render::Render(std::string filename)
 {
     int count = 0;
     ifstream file(filename);

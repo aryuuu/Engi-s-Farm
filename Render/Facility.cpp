@@ -5,7 +5,7 @@ Facility::Facility(int x, int y, std::string legend) : Cell(x, y, legend)
 {
 }
 
-bool isGrass()
+bool isGrassOn()
 {
     return false;
 }

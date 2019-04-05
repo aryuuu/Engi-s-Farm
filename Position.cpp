@@ -42,3 +42,9 @@ bool Position::operator== (const Position& p)
 {
   return (this->x == p.x && this->y == p.y);
 }
+
+/** operator overloading !=, mengembalikan true jika x dan y tidak sama */
+bool Position::operator!= (const Position& p)
+{
+  return (this->x != p.x || this->y != p.y);
+}

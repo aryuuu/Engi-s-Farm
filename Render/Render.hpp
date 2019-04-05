@@ -11,7 +11,6 @@
 #include "./Facility/Mixer.hpp"
 #include "./Facility/Truck.hpp"
 #include "./Facility/Well.hpp"
-#include "../Player.hpp"
 // #include "../AnimalContainer.hpp"
 #include <string>
 
@@ -30,7 +29,7 @@ public:
     /** Constructor */
     Render(int maxX,int maxY);
     /** Constructor: From file */
-    Render(string filename);
+    Render(std::string filename);
 
     /** Destructor */
     ~Render();

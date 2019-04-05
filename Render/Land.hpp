@@ -29,7 +29,7 @@ class Land : public Cell
 	/** Fungsi Print Isi dari Land */
 	void print();
 
-	bool isGrass();
+	bool isGrassOn();
 
 	void growGrass();
 

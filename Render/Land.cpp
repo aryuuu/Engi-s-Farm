@@ -67,7 +67,7 @@ void Land::print()
     }
 }
 
-bool Land::isGrass()
+bool Land::isGrassOn()
 {
     return this->isGrass;
 }

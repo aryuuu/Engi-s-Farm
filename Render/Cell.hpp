@@ -25,7 +25,7 @@ public:
     int getPosX();
     int getPosY();
     std::string getLegend();
-    virtual bool isGrass() = 0;
+    virtual bool isGrassOn() = 0;
 
     /** Setter */
     void setPosX(int x);
