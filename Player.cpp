@@ -32,44 +32,56 @@ Product Player::getBag(int idx) const ////mengambil Product yang ada dalam Linke
 {
 	return bag.get(idx);
 }
+
 int Player::getSizeBag() //Menghitung ukuran tas
 {
 	return bag.length;
-}	
+}
+
 //setter
 void Player::setWater(int water) //mengubah nilai atribut water
 {
 	this->water=water;
 }
+
 void Player::setMoney(int money) //mengubah nilai atribut money
 {
 	this->money=money;
 }
+
 void Player::setX(int x) //mengubah nilai atribut x (posisi Absis player)
 {
 	this->x=x;
 }
+
 void Player::setY(int y)//mengubah nilai atribut y (posisi Ordinat player)
 {
 	this->y=y;
 }
+
 void Player::setBag(int idx, Product prod) //menghapus produk pada indeks i lalu menambahkan produk prod
 {
 	this->delProduct(bag.get(idx).getNama());
 	this->addProduct(prod);
-}	
+}
+
 void Player::playerMove(char move) //Memindahkan posisi player ke atas / kanan / bawah / kiri dengan parameter input charr u/r/d/l dan posisi harus valid (harus divalidasi dulu)
 {
 	if(move=='l'){
 		y-=1;
+		cout << x << " " << y << endl;
 	}else if(move=='r'){
 		y+=1;
+		cout << x << " " << y << endl;
 	}else if(move=='u'){
 		x-=1;
+		cout << x << " " << y << endl;
 	}else{
 		x+=1;
+		cout << x << " " << y << endl;
 	}
 }
+
 void Player::delProduct(string NamaProduct) //Menghapus product dari bag dengan parameter input NamaProduct
 {
 	Product cari;
@@ -77,6 +89,7 @@ void Player::delProduct(string NamaProduct) //Menghapus product dari bag dengan 
 	cari.setHarga(-1);
 	bag.remove(cari);
 }
+
 void Player::delProductAll() //Mengosongkan Bag
 {
 	int harga=0;
@@ -87,20 +100,24 @@ void Player::delProductAll() //Mengosongkan Bag
 	this->addMoney(harga);
 	
 }
+
 void Player::reduceWater() //Mengkurangi atribut water yang ada didalam gebor (Alat penyiraman)
 {
 	water-=1;
 }
+
 void Player::addProduct(Product Prod) //Menambahkan Product Prod ke Bag dan ditaruh di paling belakang
 {
 	if (this->getSizeBag()<MAXBAG){
-		bag.add(Prod);	
+		bag.add(Prod);
 	}else{
 		cout<<"Tas Penuh"<<endl;
 	}
 }
-void Player::addProduct(string Prod) //Menambahkan Nama Product Prod ke Bag dan ditaruh di paling belakang
+
+void Player::addProduct2(string Prod) //Menambahkan Nama Product Prod ke Bag dan ditaruh di paling belakang
 {
+	cout << "Prod = " << Prod << endl;
 	int idxResep;
 	if (Prod=="ButtermilkChicken"){
 		//periksa apakah ButtermilChicken bisa dibuat
@@ -164,7 +181,9 @@ void Player::addProduct(string Prod) //Menambahkan Nama Product Prod ke Bag dan 
 	} else if (Prod=="RabbitMeat"){
 		RabbitMeat X;	
 		this->addProduct(X);
-	};
+	} else {
+		cout << "Produk Tidak Sesuai" << endl;
+	}
 }
 void Player::addWater() //Mengisi gebor dengan air secara maksimal (sesuai kapasitas) dengan mengubah atribut water 
 {

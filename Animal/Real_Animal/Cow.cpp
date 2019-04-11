@@ -37,7 +37,7 @@ std::string Cow::interactProduct()
 /** menentukan produk hasil kill */
 std::string Cow::killProduct()
 {
-  return "ChckenMeat";
+  return "CowMeat";
 }
 /** menuliskan lambang dari animal tersebut ke dalam tile */
 void Cow::printTile()

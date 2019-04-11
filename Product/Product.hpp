@@ -9,8 +9,9 @@ using namespace std;
 *baik setelah interaksi dengan Animal, menyembelih
 *dan setelah melakukan pengolahan
 **/
-class Product{
-	private :
+class Product
+{
+	private:
 		/**
 		*harga produk
 		**/
@@ -19,7 +20,7 @@ class Product{
 		*nama produk
 		**/
 		string nama; 
-	public :
+	public:
 
 		//cotr
 		Product();
@@ -50,9 +51,10 @@ class Product{
 
 		//mengembalikan 1 jika nama produk sama 
 		bool operator==(const Product&);
+
+		//mengembalikan 1 jika nama produk sama 
+		int sama(Product P);
+
 };
-
-
-
 
 #endif

@@ -150,6 +150,7 @@ int Render::getMaxY()
 
 Cell* Render::getLegendCell(int x, int y)
 {
+    //cout << "Called getLegend: (" << x << "," << y << ")" << endl;
     return this->farm[x][y];
 }
 
@@ -169,17 +170,41 @@ Cell* Render::getLegendCell(int x, int y)
 
 bool Render::isValidPos(int x,int y)
 {
-  return(this->farm[x][y]->getLegend() == "truck" && 
-          this->farm[x][y]->getLegend() == "mixer" &&
-          this->farm[x][y]->getLegend() == "well" &&
-          x >= 0 && x < this->maxX && y >= 0 && y < this->maxY);
-
+  if (x >= 0 && x < this->maxX && y >= 0 && y < this->maxY)
+  {
+    return(this->farm[x][y]->getLegend() != "truck" && 
+        this->farm[x][y]->getLegend() != "mixer" &&
+        this->farm[x][y]->getLegend() != "well");
+  } else {
+    return false;
+  }
 }
 
-bool Render::isNear(int x,int y,std::string legend)
+bool Render::isWithinArea(int x, int y)
 {
-  return(this->farm[x][y + 1]->getLegend() == legend &&
-        this->farm[x + 1][y]->getLegend() == legend &&
-        this->farm[x - 1][y]->getLegend() == legend &&
-        this->farm[x][y - 1]->getLegend() == legend);
+  return (x >= 0 && x < this->maxX && y >= 0 && y < this->maxY);
+}
+
+bool Render::isNear(int x,int y,std::string _legend)
+{ 
+  if (isWithinArea(x, (y + 1)) && this->farm[x][y + 1]->getLegend() == _legend)
+  {
+    return true;
+  }
+  else if (isWithinArea((x + 1), y) && this->farm[x + 1][y]->getLegend() == _legend)
+  {
+    return true;
+  }
+  else if (isWithinArea((x - 1), y) && this->farm[x - 1][y]->getLegend() == _legend)
+  {
+    return true;
+  }
+  else if (isWithinArea(x, (y - 1)) && this->farm[x][y - 1]->getLegend() == _legend)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
 }

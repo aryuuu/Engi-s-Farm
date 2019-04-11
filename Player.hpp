@@ -51,7 +51,7 @@ class Player{
 		void delProductAll(); /*Mengosongkan Bag*/
 		void reduceWater(); /*Mengkurangi atribut water yang ada didalam gebor (Alat penyiraman)*/
 		void addProduct(Product Prod); /*Menambahkan Product Prod ke Bag dan ditaruh di paling belakang*/
-		void addProduct(string Prod); /*Menambahkan Nama Product Prod ke Bag dan ditaruh di paling belakang*/
+		void addProduct2(string Prod); /*Menambahkan Nama Product Prod ke Bag dan ditaruh di paling belakang*/
 		void addWater(); /*Mengisi gebor dengan air secara maksimal (sesuai kapasitas) dengan mengubah atribut water*/
 		void addMoney(int harga); /*Menambah atribut money sesuai dengan harga*/
 		bool isValid(int x,int y);/*Mengecek Posisi tersebut ditempati player atau tidak mengembalikan true jika posisi tersebut ditempati player*/

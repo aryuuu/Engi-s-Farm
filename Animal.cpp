@@ -1,6 +1,7 @@
 #include "Animal.hpp"
 #include <iostream>
 #include <cstdlib>
+#include <time.h>
 using namespace std;
 
 /** ctor
@@ -98,7 +99,9 @@ Position Animal::randomMove()
   int x = loc.getAbsis();
   int y = loc.getOrdinat();
 
+  srand(time(0));
   int randInt = rand() % 4 + 1;
+
   if (randInt == 1)
   {
     x--;

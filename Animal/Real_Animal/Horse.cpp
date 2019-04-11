@@ -43,6 +43,6 @@ void Horse::printTile()
   }
   else
   {
-    cout << "a";
+    cout << "h";
   }
 }

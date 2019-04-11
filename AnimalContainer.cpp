@@ -156,7 +156,7 @@ Animal* AnimalContainer::findNear(Position pos)
 }
 
 /** menggerakkan seluruh animal di dalam list ini dengan move tidak valid (divalidkan dengan Render)*/
-void AnimalContainer::allAnimalMove(Position playerPos, Render map)
+void AnimalContainer::allAnimalMove2(Position playerPos, Render map)
 {
   for (int i = 1; i <= getNumAnimal(); i++)
   {
@@ -173,13 +173,14 @@ void AnimalContainer::allAnimalMove(Position playerPos, Render map)
 /** menambahkan tingkat kelaparan setiap animal (notEatenC)*/
 void AnimalContainer::allAnimalHungrier()
 {
+  cout << "allAnimalHungrier called" << endl;
   for (int i = 1; i <= getNumAnimal(); i++)
   {
     getAnimal(i)->hungrier();
   }
 }
 /** membuat setiap animal yang berada di atas rumput dan masih lapar makan */
-void AnimalContainer::allAnimalEatGrass(Render map)
+void AnimalContainer::allAnimalEatGrass2(Render map)
 {
   for (int i = 1; i <= getNumAnimal(); i++)
   {
@@ -202,6 +203,11 @@ void AnimalContainer::killDeads()
     if (getAnimal(i)->isDead())
     {
       removeAnimal(getAnimal(i));
+    }
+    if (getNumAnimal() == 0)
+    {
+      cout << "Game over. All animals died" << endl;
+      break;
     }
   }
 }

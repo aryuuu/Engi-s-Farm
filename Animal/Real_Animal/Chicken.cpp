@@ -12,7 +12,9 @@ using namespace std;
 
 /** Konstruktor tipe khusus animal ini */
 Chicken::Chicken(Position p): Animal(p), EggProducingAnimal(p), MeatProducingAnimal(p)
-{}
+{
+  
+}
 
 /** mengembalikan habitat tempat hidup ayam */
 std::string Chicken::getHabitat() const
@@ -37,7 +39,7 @@ std::string Chicken::interactProduct()
 /** menentukan produk hasil kill */
 std::string Chicken::killProduct()
 {
-  return "ChckenMeat";
+  return "ChickenMeat";
 }
 /** menuliskan lambang dari animal tersebut ke dalam tile */
 void Chicken::printTile()
