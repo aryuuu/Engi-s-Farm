@@ -172,14 +172,20 @@ int main()
 		}
 		else if (cmd == "grow")
 		{
-			cout << "Growing the grass" << endl;
-			if (P.)
-			//masih bingung
-			// if(!map.getLegendCell(P.getX(),P.getY())->getIsGrass()){
-			// 	map.getLegendCell(P.getX(),P.getY())->setIsGrass(true);
-			// }else{
-			// 	cout<<"Rumput telah tumbuh"<<endl;
-			// }
+			if(!map.getLegendCell(P.getX(),P.getY())->isGrassOn()){
+				if (P.getWater() > 0)
+				{
+					cout << "Watering successful" << endl;
+					map.getLegendCell(P.getX(),P.getY())->growGrass();
+					P.reduceWater();
+				}
+				else
+				{
+					cout << "Air tidak cukup" << endl;
+				}
+			}else{
+				cout<<"Rumput telah tumbuh, tidak perlu disiram lagi"<<endl;
+			}
 		}
 		else
 		{
