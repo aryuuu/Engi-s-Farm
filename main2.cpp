@@ -149,7 +149,12 @@ int main()
 			else if (map.isNear(P.getX(), P.getY(), "mixer"))
 			{
 				cout << "Mixer here..." << endl;
-				// belum diimplementasikan
+				cout << "Mencoba membuat Buttermilk Chicken...  ";
+				P.addProduct2("ButtermilkChicken");
+				cout << "Mencoba membuat Omellette...  ";
+				P.addProduct2("Omellete");
+				cout << "Mencoba membuat Meatball...  ";
+				P.addProduct2("Meatball");
 			}
 			else
 			{

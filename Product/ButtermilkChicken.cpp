@@ -8,7 +8,7 @@ ButtermilkChicken::ButtermilkChicken(){
 	this->setHarga(this->price);
 }
 
-string ButtermilkChicken::getResep(int i ){
+string ButtermilkChicken::getResep(int i){
 	return this->resep[i];
 }
 
